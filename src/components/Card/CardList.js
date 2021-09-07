@@ -27,7 +27,7 @@ const CardList = ({
 
 	return (
 		<>
-			<div className="py-5 bg-gray-100 flex justify-center items-center">
+			<div className="py-5  flex justify-center items-center">
 				<div className="w-80 rounded-md shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 duration-500">
 					<img src={image} alt={`${title} film cover`} />
 					<div className="p-4 bg-white">

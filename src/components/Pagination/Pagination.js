@@ -1,6 +1,11 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid"
+import { useState } from "react"
 
-export default function Example() {
+export default function Example({ postPerPages, totalPosts }) {
+	const pageNumber = []
+	for (let i = 1; i < Math.ceil(totalPosts / postPerPages); i++) {
+		pageNumber.push(i)
+	}
 	return (
 		<div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
 			<div className="flex-1 flex justify-between sm:hidden">
@@ -21,8 +26,8 @@ export default function Example() {
 				<div>
 					<p className="text-sm text-gray-700">
 						Showing <span className="font-medium">1</span> to{" "}
-						<span className="font-medium">10</span> of{" "}
-						<span className="font-medium">97</span> results
+						<span className="font-medium">{postPerPages}</span> of{" "}
+						<span className="font-medium">{totalPosts}</span> results
 					</p>
 				</div>
 				<div>
@@ -30,40 +35,13 @@ export default function Example() {
 						className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
 						aria-label="Pagination"
 					>
-						<a
-							href="#"
-							className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-						>
-							<span className="sr-only">Previous</span>
-							<ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-						</a>
-						{/* Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" */}
-						<a
-							href="#"
-							aria-current="page"
-							className="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-						>
-							1
-						</a>
-						<a
-							href="#"
-							className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-						>
-							2
-						</a>
-						<a
-							href="#"
-							className="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
-						>
-							3
-						</a>
-						<a
-							href="#"
-							className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-						>
-							<span className="sr-only">Next</span>
-							<ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-						</a>
+						{pageNumber.map((number) => {
+							return (
+								<li className="list-none border px-4 py-2 border-gray-400 rounded-sm">
+									<a href="!#">{number}</a>
+								</li>
+							)
+						})}
 					</nav>
 				</div>
 			</div>

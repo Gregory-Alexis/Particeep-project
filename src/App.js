@@ -11,8 +11,15 @@ function App() {
 		people: [],
 		data: [],
 	})
-
+	console.log(data.length)
 	const [filter, setFilter] = useState("all")
+	const [currentPage, setCurrentPage] = useState(1)
+	const [postPerPages, setPostPerPages] = useState(5)
+
+	//Get current posts
+	const indexOfLastPost = currentPage * postPerPages
+	const indexOfFirstPost = indexOfLastPost - postPerPages
+	const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost)
 
 	const handleSelectChange = (e) => {
 		setFilter(e.target.value)
@@ -33,13 +40,21 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<Filter
-				people={people}
-				filter={filter}
-				handleSelectChange={handleSelectChange}
-			/>
-			<Card dispatch={dispatch} data={data} people={people} filter={filter} />
-			<Pagination />
+			<div className="bg-gray-500">
+				<Filter
+					people={people}
+					filter={filter}
+					handleSelectChange={handleSelectChange}
+				/>
+
+				<Card
+					dispatch={dispatch}
+					data={currentPosts}
+					people={people}
+					filter={filter}
+				/>
+				<Pagination postPerPages={postPerPages} totalPosts={data.length} />
+			</div>
 		</div>
 	)
 }

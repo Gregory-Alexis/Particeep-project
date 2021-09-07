@@ -1,4 +1,5 @@
 import { memo } from "react"
+import AffichageFilm from "../Pagination/AffichageFilm"
 
 const Filter = ({ handleSelectChange, people, filter }) => {
 	const uniqueCategory = allCategory(people)
@@ -21,23 +22,26 @@ const Filter = ({ handleSelectChange, people, filter }) => {
 	console.log(uniqueCategory)
 	return (
 		<>
-			<div className="input-group mb-3">
-				<label className="input-group-text" htmlFor="select">
-					Filter per tag
-				</label>
-				<select
-					className="form-select"
-					id="select"
-					value={filter}
-					onChange={handleSelectChange}
-				>
-					<option value="all">Tous</option>
-					{uniqueCategory.map((el) => (
-						<option key={el} value={el}>
-							{el}
-						</option>
-					))}
-				</select>
+			<div className="input-group p-2 flex justify-between">
+				<div>
+					<label className="input-group-text mx-2" htmlFor="select">
+						Filtrer par catégorie
+					</label>
+					<select
+						className="form-select"
+						id="select"
+						value={filter}
+						onChange={handleSelectChange}
+					>
+						<option value="all">Tous</option>
+						{uniqueCategory.map((el) => (
+							<option key={el} value={el}>
+								{el}
+							</option>
+						))}
+					</select>
+				</div>
+				<AffichageFilm />
 			</div>
 		</>
 	)
