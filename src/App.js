@@ -3,8 +3,8 @@ import Header from "./components/Header/Header"
 import { useEffect, useReducer, useState } from "react"
 import { movies$ } from "./movies"
 import { reducer } from "./reducer/reducer.js"
-import Filter from "./components/Button/Filter"
 import Pagination from "./components/Pagination/Pagination"
+import AllSelect from "./components/SelectParts/AllSelect"
 
 function App() {
 	const [{ people, data }, dispatch] = useReducer(reducer, {
@@ -41,7 +41,7 @@ function App() {
 		<div>
 			<Header />
 			<div className="bg-gray-500">
-				<Filter
+				<AllSelect
 					people={people}
 					filter={filter}
 					handleSelectChange={handleSelectChange}
