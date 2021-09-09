@@ -14,16 +14,17 @@ function App() {
 	console.log(data.length)
 	const [filter, setFilter] = useState("all")
 	const [currentPage, setCurrentPage] = useState(1)
-	const [postPerPages, setPostPerPages] = useState(5)
+	const [postPerPages] = useState(15)
+	const [showMovies, setShowMovies] = useState("Tout")
 
 	//Get current posts
 	const indexOfLastPost = currentPage * postPerPages
 	const indexOfFirstPost = indexOfLastPost - postPerPages
 	const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost)
 
-	const handleSelectChange = (e) => {
-		setFilter(e.target.value)
-	}
+	const paginate = (pageNumber) => setCurrentPage(pageNumber)
+	const handleShowMovies = (e) => setShowMovies(e.target.value)
+	const handleSelectChange = (e) => setFilter(e.target.value)
 
 	useEffect(() => {
 		movies$.then((people) => {
@@ -40,11 +41,13 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<div className="bg-gray-500">
+			<div className="bg-gray-500 min-h-screen">
 				<AllSelect
 					people={people}
 					filter={filter}
 					handleSelectChange={handleSelectChange}
+					showMovies={showMovies}
+					handleShowMovies={handleShowMovies}
 				/>
 
 				<Card
@@ -52,8 +55,16 @@ function App() {
 					data={currentPosts}
 					people={people}
 					filter={filter}
+					showMovies={showMovies}
+					handleShowMovies={handleShowMovies}
 				/>
-				<Pagination postPerPages={postPerPages} totalPosts={data.length} />
+				<Pagination
+					postPerPages={postPerPages}
+					totalPosts={data.length}
+					paginate={paginate}
+					indexOfFirstPost={indexOfFirstPost}
+					indexOfLastPost={indexOfLastPost}
+				/>
 			</div>
 		</div>
 	)

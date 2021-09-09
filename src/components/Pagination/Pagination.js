@@ -1,12 +1,16 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid"
-
-export default function Example({ postPerPages, totalPosts }) {
+export default function Example({
+	postPerPages,
+	totalPosts,
+	paginate,
+	indexOfFirstPost,
+	indexOfLastPost,
+}) {
 	const pageNumber = []
-	for (let i = 1; i < Math.ceil(totalPosts / postPerPages); i++) {
+	for (let i = 1; i <= Math.ceil(totalPosts / postPerPages); i++) {
 		pageNumber.push(i)
 	}
 	return (
-		<div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+		<div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 w-full">
 			<div className="flex-1 flex justify-between sm:hidden">
 				<a
 					href="!#"
@@ -24,9 +28,14 @@ export default function Example({ postPerPages, totalPosts }) {
 			<div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
 				<div>
 					<p className="text-sm text-gray-700">
-						Showing <span className="font-medium">1</span> to{" "}
-						<span className="font-medium">{postPerPages}</span> of{" "}
-						<span className="font-medium">{totalPosts}</span> results
+						Showing <span className="font-medium">{indexOfFirstPost + 1}</span>{" "}
+						to{" "}
+						<span className="font-medium">
+							{indexOfLastPost > totalPosts
+								? (indexOfLastPost = totalPosts)
+								: indexOfLastPost}
+						</span>{" "}
+						of <span className="font-medium">{totalPosts}</span> results
 					</p>
 				</div>
 
@@ -36,9 +45,15 @@ export default function Example({ postPerPages, totalPosts }) {
 						aria-label="Pagination"
 					>
 						{pageNumber.map((number) => {
+							console.log(pageNumber.length)
 							return (
-								<li className="list-none border px-4 py-2 border-gray-400 rounded-sm">
-									<a href="!#">{number}</a>
+								<li
+									key={number}
+									className="list-none border px-4 py-2 border-gray-400 rounded-sm"
+								>
+									<a onClick={() => paginate(number)} href="!#">
+										{number}
+									</a>
 								</li>
 							)
 						})}
