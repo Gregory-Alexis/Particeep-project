@@ -1,6 +1,4 @@
 import { memo } from "react"
-import { Menu, Transition } from "@headlessui/react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
 
 const FilterCategories = ({ handleSelectChange, people, filter }) => {
 	const uniqueCategory = allCategory(people)
@@ -22,7 +20,7 @@ const FilterCategories = ({ handleSelectChange, people, filter }) => {
 	}
 
 	return (
-		<div className="input-group p-2 absolute left-0 z-10">
+		<div className="input-group p-2">
 			<select
 				className="form-select text-center font-medium cursor-pointer  absolute left-0 mt-2 ml-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
 				id="select"
@@ -30,7 +28,7 @@ const FilterCategories = ({ handleSelectChange, people, filter }) => {
 				onChange={handleSelectChange}
 			>
 				<option value="all" className="rounded">
-					Tous
+					Catégories
 				</option>
 				{uniqueCategory.map((el) => (
 					<option key={el} value={el}>

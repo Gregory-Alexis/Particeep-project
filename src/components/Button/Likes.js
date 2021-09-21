@@ -7,10 +7,9 @@ const Likes = ({
 	setCount,
 	setToggleDiscount,
 	setToggleCount,
+	setValue,
 }) => {
-	const handleCount = () => {
-		setCount(count + 1)
-	}
+	const handleCount = () => setCount(count + 1)
 
 	const handleOnClickCount = () => {
 		handleCount()

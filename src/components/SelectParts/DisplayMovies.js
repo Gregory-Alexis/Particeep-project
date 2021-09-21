@@ -1,6 +1,6 @@
 const DisplayMovies = ({ people, handleShowMovies, showMovies }) => {
 	return (
-		<div className="input-group p-2 absolute right-0 z-10">
+		<div className="input-group p-2">
 			<select
 				className="form-select text-center font-medium cursor-pointer  absolute right-0 mt-2 mr-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
 				id="select"

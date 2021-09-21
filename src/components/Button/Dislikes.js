@@ -7,15 +7,16 @@ const Dislikes = ({
 	setDiscount,
 	setToggleDiscount,
 	setToggleCount,
+	setValue,
+	value,
 }) => {
-	const handleDiscount = () => {
-		setDiscount(disCount + 1)
-	}
+	const handleDiscount = () => setDiscount(disCount + 1)
 
 	const handleOnClickDiscount = () => {
 		handleDiscount()
 		setToggleDiscount(!toggleDiscount)
 		setToggleCount(false)
+		setValue(value)
 	}
 
 	return (

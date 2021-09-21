@@ -9,7 +9,7 @@ const AllSelect = ({
 	showMovies,
 }) => {
 	return (
-		<div className="flex justify-between">
+		<div className="flex justify-between mb-10">
 			<FilterCategories
 				people={people}
 				filter={filter}

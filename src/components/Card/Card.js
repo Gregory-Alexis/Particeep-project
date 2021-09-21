@@ -1,6 +1,12 @@
+import { useState } from "react"
 import CardList from "./CardList.js"
 
 const Card = ({ dispatch, data, people, filter, showMovies }) => {
+	const [refresh, setRefresh] = useState(people)
+	const handleRefresh = () => {
+		setRefresh(refresh)
+	}
+
 	const list = data.filter((el) => {
 		if (filter === "all") {
 			return true
@@ -8,7 +14,7 @@ const Card = ({ dispatch, data, people, filter, showMovies }) => {
 		}
 		return el.category.includes(filter)
 	})
-	console.log(typeof showMovies)
+
 	return (
 		<>
 			{showMovies === "Tout" &&
@@ -33,7 +39,7 @@ const Card = ({ dispatch, data, people, filter, showMovies }) => {
 					)
 				})}
 			{showMovies === "4" &&
-				list.slice(0, 4).map((el) => {
+				list.splice(0, 4).map((el) => {
 					const { id, image, title, category, synopsis } = el
 					return (
 						<ul key={id}>
@@ -95,6 +101,15 @@ const Card = ({ dispatch, data, people, filter, showMovies }) => {
 						</ul>
 					)
 				})}
+			{list.length === 0 && (
+				<button
+					type="button"
+					className="bg-blue-600 p-2 text-white rounded-lg "
+					onClick={handleRefresh}
+				>
+					Afficher tout les films
+				</button>
+			)}
 		</>
 	)
 }

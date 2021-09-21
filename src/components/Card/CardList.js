@@ -1,3 +1,4 @@
+import ProgressBar from "../ProgressBar/ProgressBar"
 import { useState } from "react"
 import Dislikes from "../Button/Dislikes"
 import Likes from "../Button/Likes"
@@ -16,6 +17,7 @@ const CardList = ({
 	const [readMore, setReadMore] = useState(false)
 	const [toggleCount, setToggleCount] = useState(false)
 	const [toggleDiscount, setToggleDiscount] = useState(false)
+	const [value, setValue] = useState((count / (count + disCount)) * 100)
 
 	const handleRead = () => {
 		setReadMore(!readMore)
@@ -62,6 +64,8 @@ const CardList = ({
 								setToggleDiscount={setToggleDiscount}
 								count={count}
 								setCount={setCount}
+								setValue={setValue}
+								value={value}
 							/>
 
 							<Dislikes
@@ -71,8 +75,12 @@ const CardList = ({
 								setToggleCount={setToggleCount}
 								disCount={disCount}
 								setDiscount={setDiscount}
+								setValue={setValue}
+								value={value}
 							/>
 						</div>
+
+						<ProgressBar value={value} max={100} />
 					</div>
 				</div>
 			</div>
