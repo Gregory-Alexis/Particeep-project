@@ -1,9 +1,9 @@
+import { memo } from "react"
 import CardList from "./CardList.js"
 
 const Card = ({
 	dispatch,
 	data,
-	people,
 	filter,
 	showMovies,
 	postPerPages,
@@ -22,12 +22,10 @@ const Card = ({
 		setPostPerPages((postPerPages = 8))
 	} else if (showMovies === "12") {
 		setPostPerPages((postPerPages = 12))
-	} else {
-		setPostPerPages(postPerPages)
 	}
 
 	return (
-		<>
+		<ul className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 			{list.map((el) => {
 				const { id, image, title, category, synopsis } = el
 				return (
@@ -35,7 +33,6 @@ const Card = ({
 						<CardList
 							dispatch={dispatch}
 							data={data}
-							people={people}
 							id={id}
 							image={image}
 							title={title}
@@ -46,7 +43,7 @@ const Card = ({
 					</li>
 				)
 			})}
-		</>
+		</ul>
 	)
 }
-export default Card
+export default memo(Card)

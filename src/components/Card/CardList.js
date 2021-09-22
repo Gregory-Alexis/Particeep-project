@@ -1,5 +1,5 @@
 import ProgressBar from "../ProgressBar/ProgressBar"
-import { useState } from "react"
+import { memo, useState } from "react"
 import Dislikes from "../Button/Dislikes"
 import Likes from "../Button/Likes"
 
@@ -86,4 +86,4 @@ const CardList = ({
 	)
 }
 
-export default CardList
+export default memo(CardList)

@@ -1,7 +1,5 @@
-import { memo } from "react"
-
-const FilterCategories = ({ handleSelectChange, people, filter }) => {
-	const uniqueCategory = allCategory(people)
+const FilterCategories = ({ handleSelectChange, filter, data }) => {
+	const uniqueCategory = allCategory(data)
 
 	function allCategory(list) {
 		let listTotal = []
@@ -40,4 +38,4 @@ const FilterCategories = ({ handleSelectChange, people, filter }) => {
 	)
 }
 
-export default memo(FilterCategories)
+export default FilterCategories

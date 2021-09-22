@@ -7,8 +7,7 @@ import Pagination from "./components/Pagination/Pagination"
 import AllSelect from "./components/SelectParts/AllSelect"
 
 function App() {
-	const [{ people, data }, dispatch] = useReducer(reducer, {
-		people: [],
+	const [{ data }, dispatch] = useReducer(reducer, {
 		data: [],
 	})
 	const [filter, setFilter] = useState("all")
@@ -26,12 +25,6 @@ function App() {
 	const handleSelectChange = (e) => setFilter(e.target.value)
 
 	useEffect(() => {
-		movies$.then((people) => {
-			dispatch({ type: "FETCH_PEOPLE", payload: people })
-		})
-	}, [])
-
-	useEffect(() => {
 		movies$.then((data) => {
 			dispatch({ type: "FETCH_SUCCESS", payload: data })
 		})
@@ -42,24 +35,21 @@ function App() {
 			<Header />
 			<div className="bg-gray-900 min-h-screen">
 				<AllSelect
-					people={people}
 					filter={filter}
 					handleSelectChange={handleSelectChange}
 					showMovies={showMovies}
 					handleShowMovies={handleShowMovies}
+					data={data}
 				/>
-				<ul className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-					<Card
-						dispatch={dispatch}
-						data={currentPosts}
-						people={people}
-						filter={filter}
-						showMovies={showMovies}
-						handleShowMovies={handleShowMovies}
-						postPerPages={postPerPages}
-						setPostPerPages={setPostPerPages}
-					/>
-				</ul>
+				<Card
+					dispatch={dispatch}
+					data={currentPosts}
+					filter={filter}
+					showMovies={showMovies}
+					handleShowMovies={handleShowMovies}
+					postPerPages={postPerPages}
+					setPostPerPages={setPostPerPages}
+				/>
 				<Pagination
 					postPerPages={postPerPages}
 					totalPosts={data.length}

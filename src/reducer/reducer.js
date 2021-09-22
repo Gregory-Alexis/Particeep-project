@@ -12,13 +12,6 @@ export const reducer = (state, action) => {
 				error: "",
 				data: action.payload,
 			}
-		case "FETCH_PEOPLE":
-			return {
-				...state,
-				loading: false,
-				error: "",
-				people: action.payload,
-			}
 
 		case "FETCH_FAILURE":
 			return {

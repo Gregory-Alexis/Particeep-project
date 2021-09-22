@@ -11,7 +11,7 @@ const Pagination = ({
 	}
 
 	return (
-		<div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 w-full">
+		<footer className="bg-white px-4 py-3 flex items-center justify-between border-t w-full mt-8 border-gray-200  sm:px-6">
 			<div className=" flex-1 flex items-center justify-between">
 				<div>
 					<p className="text-sm text-gray-700">
@@ -28,7 +28,7 @@ const Pagination = ({
 
 				<div>
 					<nav
-						className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+						className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px "
 						aria-label="Pagination"
 					>
 						{pageNumber.map((number) => {
@@ -37,7 +37,13 @@ const Pagination = ({
 									key={number}
 									className="list-none border px-4 py-2 border-gray-400 rounded-sm"
 								>
-									<a onClick={() => paginate(number)} href={`page=${number}`}>
+									<a
+										onClick={(e) => {
+											e.preventDefault()
+											paginate(number)
+										}}
+										href="!"
+									>
 										{number}
 									</a>
 								</li>
@@ -46,7 +52,7 @@ const Pagination = ({
 					</nav>
 				</div>
 			</div>
-		</div>
+		</footer>
 	)
 }
 

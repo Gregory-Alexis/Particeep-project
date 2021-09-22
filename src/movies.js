@@ -44,7 +44,7 @@ const movies = [
 	{
 		id: "5",
 		image:
-			"https://koubadvd.com/wp-content/uploads/2019/02/5101-hqwsysz5282404.jpg",
+			"https://img.filmsactu.net/datas/films/c/r/creed-2/n/creed-2-5bdcb81225bfb.jpg",
 		title: "Creed II",
 		category: "Drame",
 		synopsis:
@@ -54,7 +54,8 @@ const movies = [
 	},
 	{
 		id: "6",
-		image: "https://fr.web.img4.acsta.net/pictures/21/05/27/15/44/2102945.jpg",
+		image:
+			"https://lumiere-a.akamaihd.net/v1/images/p_junglecruise_19736_5a2634c5.jpeg?region=0%2C0%2C540%2C810",
 		title: "Jungle Cruise",
 		category: "Aventure",
 		synopsis:
@@ -74,7 +75,7 @@ const movies = [
 	},
 	{
 		id: "8",
-		image: "https://m.media-amazon.com/images/I/815VVAvdgDL._AC_SL1500_.jpg",
+		image: "https://miro.medium.com/max/500/0*xQirCtmOA-D3uAxQ.jpg",
 		title: "Seven",
 		category: "Thriller",
 		synopsis:

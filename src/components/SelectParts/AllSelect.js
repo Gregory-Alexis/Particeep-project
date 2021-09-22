@@ -2,21 +2,20 @@ import DisplayMovies from "./DisplayMovies"
 import FilterCategories from "./FilterCategories"
 
 const AllSelect = ({
-	people,
 	filter,
 	handleSelectChange,
 	handleShowMovies,
 	showMovies,
+	data,
 }) => {
 	return (
-		<div className="flex justify-between mb-10">
+		<div className="flex justify-between mb-32">
 			<FilterCategories
-				people={people}
 				filter={filter}
 				handleSelectChange={handleSelectChange}
+				data={data}
 			/>
 			<DisplayMovies
-				people={people}
 				showMovies={showMovies}
 				handleShowMovies={handleShowMovies}
 			/>
