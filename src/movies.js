@@ -11,7 +11,8 @@ const movies = [
 	},
 	{
 		id: "2",
-		image: "https://fr.web.img3.acsta.net/pictures/18/05/04/13/15/4943524.jpg",
+		image:
+			"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fe72cec1-9589-4de7-8305-5727df7fc7e2/dceipx3-49fd463c-f8bb-46b3-bb6c-43ae24257a6a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZlNzJjZWMxLTk1ODktNGRlNy04MzA1LTU3MjdkZjdmYzdlMlwvZGNlaXB4My00OWZkNDYzYy1mOGJiLTQ2YjMtYmI2Yy00M2FlMjQyNTdhNmEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.y26yyYGR9PZzi5YnmTDH99Z4C2sUYb8BxhPTCNIWbG4",
 		title: "Midnight Sun",
 		category: "Comedy",
 		synopsis: `Katie Price, 17 ans, est une adolescente comme les autres, ou presque. Elle ne peut en aucun cas être exposée à la lumière du jour, sous peine d’en mourir. La journée, elle compose et joue de la guitare, et observe le monde depuis sa chambre, notamment Charlie Reed, son voisin.
@@ -43,7 +44,7 @@ const movies = [
 	{
 		id: "5",
 		image:
-			"https://www.ecranlarge.com/uploads/image/001/049/creed-ii-affiche-francaise-1049850.jpg",
+			"https://koubadvd.com/wp-content/uploads/2019/02/5101-hqwsysz5282404.jpg",
 		title: "Creed II",
 		category: "Drame",
 		synopsis:
@@ -84,7 +85,7 @@ const movies = [
 	{
 		id: "9",
 		image:
-			"https://media2.woopic.com/api/v1/images/174%2Faudiovisual%2Fmovie%2F2f3%2F67b%2F15507f6938a57765991bc33949%2Finception%7Cmovies-143692-9001711092.jpg?facedetect=1&quality=85",
+			"https://static.displate.com/857x1200/displate/2020-03-09/9cea2dbc90e41568d787fb7608fc94d1_f67f0ea30c94dcda84f0150e858ef504.jpg",
 		title: "Inception",
 		category: "Thriller",
 		synopsis:

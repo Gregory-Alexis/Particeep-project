@@ -11,17 +11,16 @@ function App() {
 		people: [],
 		data: [],
 	})
-	console.log(data.length)
 	const [filter, setFilter] = useState("all")
 	const [currentPage, setCurrentPage] = useState(1)
-	const [postPerPages] = useState(15)
+	const [postPerPages, setPostPerPages] = useState(16)
 	const [showMovies, setShowMovies] = useState("Tout")
 
-	//Get current posts
 	const indexOfLastPost = currentPage * postPerPages
 	const indexOfFirstPost = indexOfLastPost - postPerPages
 	const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost)
 
+	// Pagination
 	const paginate = (pageNumber) => setCurrentPage(pageNumber)
 	const handleShowMovies = (e) => setShowMovies(e.target.value)
 	const handleSelectChange = (e) => setFilter(e.target.value)
@@ -41,7 +40,7 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<div className="bg-gray-500 min-h-screen">
+			<div className="bg-gray-900 min-h-screen">
 				<AllSelect
 					people={people}
 					filter={filter}
@@ -49,15 +48,18 @@ function App() {
 					showMovies={showMovies}
 					handleShowMovies={handleShowMovies}
 				/>
-
-				<Card
-					dispatch={dispatch}
-					data={currentPosts}
-					people={people}
-					filter={filter}
-					showMovies={showMovies}
-					handleShowMovies={handleShowMovies}
-				/>
+				<ul className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+					<Card
+						dispatch={dispatch}
+						data={currentPosts}
+						people={people}
+						filter={filter}
+						showMovies={showMovies}
+						handleShowMovies={handleShowMovies}
+						postPerPages={postPerPages}
+						setPostPerPages={setPostPerPages}
+					/>
+				</ul>
 				<Pagination
 					postPerPages={postPerPages}
 					totalPosts={data.length}

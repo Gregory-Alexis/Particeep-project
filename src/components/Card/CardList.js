@@ -28,63 +28,61 @@ const CardList = ({
 	}
 
 	return (
-		<>
-			<div className="py-5  flex justify-center items-center">
-				<div className="w-80 rounded-md shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 duration-500">
-					<img src={image} alt={`${title} film cover`} />
-					<div className="p-4 bg-white">
-						<div className="flex justify-between">
-							<h1 className="font-bold text-lg">{title}</h1>
-							<button
-								type="button"
-								className=" bg-blue-600 text-white rounded-md px-2 py-1"
-								onClick={handleDelete}
-							>
-								<small>Pas intéressé</small>
-							</button>
-						</div>
-						<p className="text-gray-800 opacity-50 font-medium">
-							<small>{category}</small>
-						</p>
-						<p className="pt-2 textbase">
-							{readMore ? synopsis : `${synopsis.slice(0, 100)}...`}{" "}
-							<button
-								type="button"
-								className="text-blue-600 text-sm"
-								onClick={handleRead}
-							>
-								{readMore ? "Show less" : "Read more"}
-							</button>
-						</p>
-						<div className="flex justify-between pt-5">
-							<Likes
-								movie={movie}
-								toggleCount={toggleCount}
-								setToggleCount={setToggleCount}
-								setToggleDiscount={setToggleDiscount}
-								count={count}
-								setCount={setCount}
-								setValue={setValue}
-								value={value}
-							/>
-
-							<Dislikes
-								movie={movie}
-								toggleDiscount={toggleDiscount}
-								setToggleDiscount={setToggleDiscount}
-								setToggleCount={setToggleCount}
-								disCount={disCount}
-								setDiscount={setDiscount}
-								setValue={setValue}
-								value={value}
-							/>
-						</div>
-
-						<ProgressBar value={value} max={100} />
+		<div className="py-5 flex justify-center items-center">
+			<div className="w-80 rounded-md shadow-lg transform hover:scale-105 duration-500 ">
+				<img src={image} alt={`${title} film cover`} className="h-5/6" />
+				<div className="p-4 bg-white">
+					<div className="flex justify-between">
+						<h1 className="font-bold text-lg">{title}</h1>
+						<button
+							type="button"
+							className=" bg-blue-600 text-white rounded-md px-2 py-1"
+							onClick={handleDelete}
+						>
+							<small>Pas intéressé</small>
+						</button>
 					</div>
+					<p className="text-gray-800 opacity-50 font-medium">
+						<small>{category}</small>
+					</p>
+					<p className="pt-2 textbase">
+						{readMore ? synopsis : `${synopsis.slice(0, 100)}...`}{" "}
+						<button
+							type="button"
+							className="text-blue-600 text-sm"
+							onClick={handleRead}
+						>
+							{readMore ? "Show less" : "Read more"}
+						</button>
+					</p>
+					<div className="flex justify-between pt-5">
+						<Likes
+							movie={movie}
+							toggleCount={toggleCount}
+							setToggleCount={setToggleCount}
+							setToggleDiscount={setToggleDiscount}
+							count={count}
+							setCount={setCount}
+							setValue={setValue}
+							value={value}
+						/>
+
+						<Dislikes
+							movie={movie}
+							toggleDiscount={toggleDiscount}
+							setToggleDiscount={setToggleDiscount}
+							setToggleCount={setToggleCount}
+							disCount={disCount}
+							setDiscount={setDiscount}
+							setValue={setValue}
+							value={value}
+						/>
+					</div>
+
+					<ProgressBar value={value} max={100} />
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

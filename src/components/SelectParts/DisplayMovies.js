@@ -1,4 +1,4 @@
-const DisplayMovies = ({ people, handleShowMovies, showMovies }) => {
+const DisplayMovies = ({ handleShowMovies, showMovies }) => {
 	return (
 		<div className="input-group p-2">
 			<select
@@ -7,7 +7,7 @@ const DisplayMovies = ({ people, handleShowMovies, showMovies }) => {
 				value={showMovies}
 				onChange={handleShowMovies}
 			>
-				<option value="Tout">Tout</option>
+				<option value="Tout">Trier films par</option>
 				<option value="4">4</option>
 				<option value="8">8</option>
 				<option value="12">12</option>
