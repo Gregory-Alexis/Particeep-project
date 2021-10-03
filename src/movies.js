@@ -17,13 +17,13 @@ const movies = [
 		category: "Comedy",
 		synopsis: `Katie Price, 17 ans, est une adolescente comme les autres, ou presque. Elle ne peut en aucun cas être exposée à la lumière du jour, sous peine d’en mourir. La journée, elle compose et joue de la guitare, et observe le monde depuis sa chambre, notamment Charlie Reed, son voisin.
                À la nuit tombée, ses rêves prennent vie ! Elle sort chanter dans la gare près de chez elle. Un soir, elle se retrouve face à Charlie. Lui est instantanément sous le charme et se met en tête de la revoir... Pourront-ils s’aimer au grand jour ?`,
-		likes: 252,
-		dislikes: 542,
+		likes: 225,
+		dislikes: 186,
 	},
 	{
 		id: "3",
 		image: "https://fr.web.img6.acsta.net/pictures/18/04/13/15/09/0323902.jpg",
-		title: "Les indestructibles 2",
+		title: "Indestructibles 2",
 		category: "Animation",
 		synopsis:
 			"Notre famille de super-héros préférée est de retour! Cette fois c’est Hélène qui se retrouve sur le devant de la scène laissant à Bob le soin de mener à bien les mille et une missions de la vie quotidienne et de s’occuper de Violette, Flèche et de bébé Jack-Jack. C’est un changement de rythme difficile pour la famille d’autant que personne ne mesure réellement l’étendue des incroyables pouvoirs du petit dernier… Lorsqu’un nouvel ennemi fait surface, la famille et Frozone vont devoir s’allier comme jamais pour déjouer son plan machiavélique.",
@@ -34,7 +34,7 @@ const movies = [
 		id: "4",
 		image:
 			"https://media.senscritique.com/media/000017703233/source_big/Sans_un_bruit.jpg",
-		title: "Sans un bruit",
+		title: "Quiet Place",
 		category: "Thriller",
 		synopsis:
 			"Une famille tente de survivre sous la menace de mystérieuses créatures qui attaquent au moindre bruit. S’ils vous entendent, il est déjà trop tard.",

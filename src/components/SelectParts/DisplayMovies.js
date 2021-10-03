@@ -1,13 +1,16 @@
-const DisplayMovies = ({ handleShowMovies, showMovies }) => {
+import { useMovie } from "../../context/MovieContext"
+
+const DisplayMovies = () => {
+	const { dispatch } = useMovie()
 	return (
-		<div className="input-group p-2">
+		<div>
 			<select
-				className="form-select text-center font-medium cursor-pointer  absolute right-0 mt-2 mr-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
-				id="select"
-				value={showMovies}
-				onChange={handleShowMovies}
+				className="form-select ml-7 w-36 mt-1 text-center font-medium cursor-pointer rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none xl:flex"
+				onChange={(e) =>
+					dispatch({ type: "SHOW_MOVIE", payload: e.target.value })
+				}
 			>
-				<option value="Tout">Trier films par</option>
+				<option value="Tout">All Movies</option>
 				<option value="4">4</option>
 				<option value="8">8</option>
 				<option value="12">12</option>

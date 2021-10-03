@@ -1,81 +1,68 @@
 import ProgressBar from "../ProgressBar/ProgressBar"
-import { memo, useState } from "react"
+import { useState } from "react"
 import Dislikes from "../Button/Dislikes"
 import Likes from "../Button/Likes"
+import { useMovie } from "../../context/MovieContext"
+import { useCard } from "../../context/CardContext"
 
-const CardList = ({
-	id,
-	image,
-	title,
-	category,
-	synopsis,
-	movie,
-	dispatch,
-}) => {
-	const [disCount, setDiscount] = useState(movie.dislikes)
-	const [count, setCount] = useState(movie.likes)
-	const [readMore, setReadMore] = useState(false)
-	const [toggleCount, setToggleCount] = useState(false)
-	const [toggleDiscount, setToggleDiscount] = useState(false)
-	const [value, setValue] = useState((count / (count + disCount)) * 100)
+const CardList = ({ id, image, title, category, synopsis, movie }) => {
+	const { dispatch } = useMovie()
+	const { readMore, CardDispatch } = useCard()
 
-	const handleRead = () => {
-		setReadMore(!readMore)
-	}
-
-	const handleDelete = () => {
-		dispatch({ type: "DELETE", id })
-	}
+	const [likes, setLikes] = useState(movie.likes)
+	const [disLikes, setDisLikes] = useState(movie.dislikes)
+	const [value, setValue] = useState((likes / (likes + disLikes)) * 100)
 
 	return (
-		<div className="py-5 flex justify-center items-center">
-			<div className="w-80 rounded-md shadow-lg transform hover:scale-105 duration-500 ">
+		<div className=" flex justify-center items-center">
+			<div className=" py-5 rounded-md shadow-lg transform hover:scale-105 duration-500 w-80 xl:w-64">
 				<img src={image} alt={`${title} film cover`} className="h-5/6" />
 				<div className="p-4 bg-white">
 					<div className="flex justify-between">
-						<h1 className="font-bold text-lg">{title}</h1>
+						<h1 className="font-bold">{title}</h1>
 						<button
 							type="button"
-							className=" bg-blue-600 text-white rounded-md px-2 py-1"
-							onClick={handleDelete}
+							className=" bg-blue-600 text-white rounded-md px-2"
+							onClick={() => dispatch({ type: "DELETE", id })}
 						>
 							<small>Pas intéressé</small>
 						</button>
 					</div>
-					<p className="text-gray-800 opacity-50 font-medium">
+
+					<p className="text-gray-900 opacity-50 font-medium text-sm">
 						<small>{category}</small>
 					</p>
+
 					<p className="pt-2 textbase">
 						{readMore ? synopsis : `${synopsis.slice(0, 100)}...`}{" "}
 						<button
 							type="button"
 							className="text-blue-600 text-sm"
-							onClick={handleRead}
+							onClick={() =>
+								CardDispatch({ type: "READ_MORE", payload: !readMore })
+							}
 						>
 							{readMore ? "Show less" : "Read more"}
 						</button>
 					</p>
 					<div className="flex justify-between pt-5">
 						<Likes
-							movie={movie}
-							toggleCount={toggleCount}
-							setToggleCount={setToggleCount}
-							setToggleDiscount={setToggleDiscount}
-							count={count}
-							setCount={setCount}
 							setValue={setValue}
 							value={value}
+							likes={likes}
+							disLikes={disLikes}
+							movie={movie}
+							setLikes={setLikes}
+							setDisLikes={setDisLikes}
 						/>
-
 						<Dislikes
-							movie={movie}
-							toggleDiscount={toggleDiscount}
-							setToggleDiscount={setToggleDiscount}
-							setToggleCount={setToggleCount}
-							disCount={disCount}
-							setDiscount={setDiscount}
 							setValue={setValue}
 							value={value}
+							likes={likes}
+							disLikes={disLikes}
+							setLikes={setLikes}
+							setDisLikes={setDisLikes}
+							movie={movie}
 						/>
 					</div>
 
@@ -86,4 +73,4 @@ const CardList = ({
 	)
 }
 
-export default memo(CardList)
+export default CardList

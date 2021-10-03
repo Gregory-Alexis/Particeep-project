@@ -1,35 +1,31 @@
 import LikeButton from "../../assets/like.svg"
+import { useCard } from "../../context/CardContext"
 
-const Likes = ({
-	movie,
-	toggleCount,
-	count,
-	setCount,
-	setToggleDiscount,
-	setToggleCount,
-	setValue,
-}) => {
-	const handleCount = () => setCount(count + 1)
+const Likes = ({ likes, disLikes, setValue, value }) => {
+	const { toggleLikes, CardDispatch } = useCard()
 
 	const handleOnClickCount = () => {
-		handleCount()
-		setToggleCount(!toggleCount)
-		setToggleDiscount(false)
+		CardDispatch({ type: "TOGGLE_LIKES", payload: !toggleLikes })
+		CardDispatch({ type: "TOGGLE_DISLIKES", payload: false })
+		toggleLikes
+			? setValue((likes / (likes + disLikes)) * 100)
+			: setValue(((likes + 1) / (likes + disLikes)) * 100)
 	}
-
+	console.log(likes)
+	console.log(value)
 	return (
 		<div>
 			<button
 				type="button"
-				onClick={() => handleOnClickCount()}
+				onClick={handleOnClickCount}
 				className={`rounded-full w-12 h-12 transform hover:scale-110 duration-200 ${
-					toggleCount ? "bg-green-500" : "shadow-black"
+					toggleLikes && "bg-green-500"
 				} `}
 			>
 				<img src={LikeButton} alt="boutton j'aime" />
 			</button>
-			<span className="flex justify-center ">
-				{toggleCount ? movie.likes + 1 : movie.likes}
+			<span className="flex justify-center">
+				{toggleLikes ? likes + 1 : likes}
 			</span>
 		</div>
 	)

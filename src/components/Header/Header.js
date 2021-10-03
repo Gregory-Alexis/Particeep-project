@@ -1,6 +1,6 @@
 const Header = () => {
 	return (
-		<div className="bg-blue-900 text-white text-center p-5 text-xl ">
+		<div className="bg-blue-900 text-white text-center p-5 text-xl">
 			<h1>
 				React Movie Project by{" "}
 				<a

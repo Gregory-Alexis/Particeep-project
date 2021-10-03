@@ -1,4 +1,7 @@
-const FilterCategories = ({ handleSelectChange, filter, data }) => {
+import { useMovie } from "../../context/MovieContext"
+
+const FilterCategories = () => {
+	const { data, dispatch, filterCategory } = useMovie()
 	const uniqueCategory = allCategory(data)
 
 	function allCategory(list) {
@@ -18,15 +21,17 @@ const FilterCategories = ({ handleSelectChange, filter, data }) => {
 	}
 
 	return (
-		<div className="input-group p-2">
+		<div>
 			<select
-				className="form-select text-center font-medium cursor-pointer  absolute left-0 mt-2 ml-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+				className="form-select ml-5 w-36 mt-1 text-center font-medium cursor-pointer rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
 				id="select"
-				value={filter}
-				onChange={handleSelectChange}
+				value={filterCategory}
+				onChange={(e) =>
+					dispatch({ type: "FILTER_CATEGORY", payload: e.target.value })
+				}
 			>
 				<option value="all" className="rounded">
-					Catégories
+					Genres
 				</option>
 				{uniqueCategory.map((el) => (
 					<option key={el} value={el}>

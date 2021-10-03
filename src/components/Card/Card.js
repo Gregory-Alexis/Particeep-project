@@ -1,19 +1,16 @@
-import { memo } from "react"
 import CardList from "./CardList.js"
+import { useMovie } from "../../context/MovieContext"
+import { CardContextProvider } from "../../context/CardContext.js"
 
-const Card = ({
-	dispatch,
-	data,
-	filter,
-	showMovies,
-	postPerPages,
-	setPostPerPages,
-}) => {
-	const list = data.filter((el) => {
-		if (filter === "all") {
+const Card = ({ postPerPages }) => {
+	const { filterCategory, showMovies, setPostPerPages, currentPosts } =
+		useMovie()
+
+	const list = currentPosts.filter((el) => {
+		if (filterCategory === "all") {
 			return true
 		}
-		return el.category.includes(filter)
+		return el.category.includes(filterCategory)
 	})
 
 	if (showMovies === "4") {
@@ -25,25 +22,30 @@ const Card = ({
 	}
 
 	return (
-		<ul className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+		<ul
+			className={`md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ${
+				showMovies === "4" && "xl:grid-cols-4"
+			}`}
+		>
 			{list.map((el) => {
 				const { id, image, title, category, synopsis } = el
 				return (
 					<li key={id}>
-						<CardList
-							dispatch={dispatch}
-							data={data}
-							id={id}
-							image={image}
-							title={title}
-							category={category}
-							synopsis={synopsis}
-							movie={el}
-						/>
+						<CardContextProvider>
+							<CardList
+								id={id}
+								image={image}
+								title={title}
+								category={category}
+								synopsis={synopsis}
+								movie={el}
+								showMovies={showMovies}
+							/>
+						</CardContextProvider>
 					</li>
 				)
 			})}
 		</ul>
 	)
 }
-export default memo(Card)
+export default Card

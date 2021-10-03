@@ -12,7 +12,6 @@ export const reducer = (state, action) => {
 				error: "",
 				data: action.payload,
 			}
-
 		case "FETCH_FAILURE":
 			return {
 				...state,
@@ -23,8 +22,38 @@ export const reducer = (state, action) => {
 			return {
 				...state,
 				data: state.data.filter((el) => el.id !== action.id),
-				loading: false,
 			}
+		case "FILTER_CATEGORY":
+			return {
+				...state,
+				filterCategory: action.payload,
+			}
+		case "CURRENT_PAGE":
+			return {
+				...state,
+				currentPage: action.payload,
+			}
+		case "SHOW_MOVIE":
+			return {
+				...state,
+				showMovies: action.payload,
+			}
+		case "TOGGLE_LIKES":
+			return {
+				...state,
+				toggleLikes: action.payload,
+			}
+		case "TOGGLE_DISLIKES":
+			return {
+				...state,
+				toggleDisLikes: action.payload,
+			}
+		case "READ_MORE":
+			return {
+				...state,
+				readMore: action.payload,
+			}
+
 		default:
 			throw new Error("Unsupported action type")
 	}
