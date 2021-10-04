@@ -11,8 +11,7 @@ const Likes = ({ likes, disLikes, setValue, value }) => {
 			? setValue((likes / (likes + disLikes)) * 100)
 			: setValue(((likes + 1) / (likes + disLikes)) * 100)
 	}
-	console.log(likes)
-	console.log(value)
+
 	return (
 		<div>
 			<button

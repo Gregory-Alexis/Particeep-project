@@ -15,21 +15,21 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 
 	return (
 		<div className=" flex justify-center items-center">
-			<div className=" py-5 rounded-md shadow-lg transform hover:scale-105 duration-500 w-80 xl:w-64">
+			<div className=" py-5 rounded-md shadow-lg transform hover:scale-105 duration-500 w-80">
 				<img src={image} alt={`${title} film cover`} className="h-5/6" />
 				<div className="p-4 bg-white">
 					<div className="flex justify-between">
-						<h1 className="font-bold">{title}</h1>
+						<h1 className="font-bold text-lg">{title}</h1>
 						<button
 							type="button"
-							className=" bg-blue-600 text-white rounded-md px-2"
+							className=" bg-blue-600 text-white rounded-md px-2 ease-in-out duration-200 hover:bg-red-600"
 							onClick={() => dispatch({ type: "DELETE", id })}
 						>
-							<small>Pas intéressé</small>
+							<small>Not interested</small>
 						</button>
 					</div>
 
-					<p className="text-gray-900 opacity-50 font-medium text-sm">
+					<p className="text-gray-900 opacity-40 font-bold">
 						<small>{category}</small>
 					</p>
 
@@ -37,7 +37,7 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 						{readMore ? synopsis : `${synopsis.slice(0, 100)}...`}{" "}
 						<button
 							type="button"
-							className="text-blue-600 text-sm"
+							className="text-blue-600 text-sm font-medium"
 							onClick={() =>
 								CardDispatch({ type: "READ_MORE", payload: !readMore })
 							}

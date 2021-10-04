@@ -6,7 +6,6 @@ import { useMovie } from "./context/MovieContext"
 
 function App() {
 	let { postPerPages } = useMovie()
-
 	return (
 		<>
 			<Header />

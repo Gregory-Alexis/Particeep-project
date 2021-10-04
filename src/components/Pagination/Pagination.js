@@ -5,11 +5,12 @@ const Pagination = () => {
 		postPerPages,
 		paginate,
 		indexOfFirstPost,
+		dispatch,
 		currentPage,
-		setCurrentPage,
+		totalPosts,
 	} = useMovie()
 
-	let { totalPosts, indexOfLastPost, dispatch } = useMovie()
+	let { indexOfLastPost } = useMovie()
 
 	const pageNumber = []
 	for (let i = 1; i <= Math.ceil(totalPosts / postPerPages); i++) {
@@ -20,14 +21,18 @@ const Pagination = () => {
 		<footer className="bg-white px-4 py-3 flex items-center justify-between border-t w-full sm:px-6">
 			<div className=" flex-1 flex items-center justify-between sm:hidden">
 				<button
-					onClick={() => dispatch({ type: "CURRENT_PAGE", payload: 1 })}
+					onClick={() =>
+						dispatch({ type: "CURRENT_PAGE", payload: currentPage - 1 })
+					}
 					className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
 					disabled={currentPage === 1}
 				>
 					Previous
 				</button>
 				<button
-					onClick={() => setCurrentPage(currentPage + 1)}
+					onClick={() =>
+						dispatch({ type: "CURRENT_PAGE", payload: currentPage + 1 })
+					}
 					className={`ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50`}
 					disabled={indexOfLastPost > totalPosts}
 				>
@@ -59,15 +64,15 @@ const Pagination = () => {
 									key={number}
 									className="list-none border px-4 py-2 border-gray-400 rounded-sm"
 								>
-									<a
+									<button
+										type="button"
 										onClick={(e) => {
 											e.preventDefault()
 											paginate(number)
 										}}
-										href="!"
 									>
 										{number}
-									</a>
+									</button>
 								</li>
 							)
 						})}

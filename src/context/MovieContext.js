@@ -16,16 +16,15 @@ export const MovieContextProvider = ({ children }) => {
 		data: [],
 		loading: true,
 		error: "",
-		showMovies: "Tout",
 		filterCategory: "all",
 		currentPage: 1,
 	})
 
-	const { data, loading, error, showMovies, filterCategory, currentPage } =
-		state
+	const { data, loading, error, filterCategory, currentPage } = state
+
 	const isMounted = useIsMounted()
 
-	let [postPerPages, setPostPerPages] = useState(20)
+	const [postPerPages, setPostPerPages] = useState(20)
 
 	const indexOfLastPost = currentPage * postPerPages
 	const indexOfFirstPost = indexOfLastPost - postPerPages
@@ -67,7 +66,6 @@ export const MovieContextProvider = ({ children }) => {
 				loading,
 				error,
 				dispatch,
-				showMovies,
 			}}
 		>
 			{children}

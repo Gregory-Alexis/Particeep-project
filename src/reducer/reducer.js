@@ -33,11 +33,6 @@ export const reducer = (state, action) => {
 				...state,
 				currentPage: action.payload,
 			}
-		case "SHOW_MOVIE":
-			return {
-				...state,
-				showMovies: action.payload,
-			}
 		case "TOGGLE_LIKES":
 			return {
 				...state,
@@ -51,7 +46,12 @@ export const reducer = (state, action) => {
 		case "READ_MORE":
 			return {
 				...state,
-				readMore: action.payload,
+				readMore: state.postPerPages,
+			}
+		case "POST_PER_PAGES":
+			return {
+				...state,
+				postPerPages: action.payload,
 			}
 
 		default:

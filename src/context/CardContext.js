@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useReducer } from "react"
-import { reducer } from "../reducer/reducer"
+import { cardReducer } from "../reducer/cardReducer"
 
 export const CardContext = createContext()
 
 export const CardContextProvider = ({ children }) => {
-	const [state, CardDispatch] = useReducer(reducer, {
+	const [state, CardDispatch] = useReducer(cardReducer, {
 		toggleLikes: false,
 		toggleDisLikes: false,
 		readMore: false,
