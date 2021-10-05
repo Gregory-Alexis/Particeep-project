@@ -1,20 +1,23 @@
 import CardList from "./CardList.js"
 import { useMovie } from "../../context/MovieContext"
 import { CardContextProvider } from "../../context/CardContext.js"
+import { useState } from "react"
 
 const Card = () => {
-	let { filterCategory, currentPosts } = useMovie()
+	let { list, searchFilter } = useMovie()
 
-	const list = currentPosts.filter((el) => {
-		if (filterCategory === "all") {
-			return true
-		}
-		return el.category.includes(filterCategory)
+	let dataSearch = list.filter((item) => {
+		return Object.keys(item).some((key) =>
+			item[key]
+				.toString()
+				.toLowerCase()
+				.includes(searchFilter.toString().toLowerCase())
+		)
 	})
 
 	return (
-		<ul className={`md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
-			{list.map((el) => {
+		<ul className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+			{dataSearch.map((el) => {
 				const { id, image, title, category, synopsis } = el
 				return (
 					<li key={id}>

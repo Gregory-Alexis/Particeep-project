@@ -1,7 +1,9 @@
+import { useState } from "react"
 import { useMovie } from "../../context/MovieContext"
 
 const FilterCategories = () => {
 	const { data, dispatch } = useMovie()
+
 	const uniqueCategory = allCategory(data)
 
 	function allCategory(list) {

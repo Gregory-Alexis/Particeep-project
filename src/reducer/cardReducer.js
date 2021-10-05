@@ -16,6 +16,6 @@ export const cardReducer = (state, action) => {
 				readMore: action.payload,
 			}
 		default:
-			break
+			throw new Error(`Unsupported action type ${action.type} in cardReducer`)
 	}
 }

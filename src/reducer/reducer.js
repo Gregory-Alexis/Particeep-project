@@ -55,6 +55,6 @@ export const reducer = (state, action) => {
 			}
 
 		default:
-			throw new Error("Unsupported action type")
+			throw new Error(`Unsupported action type ${action.type} in reducer`)
 	}
 }

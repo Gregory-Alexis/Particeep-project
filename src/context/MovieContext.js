@@ -18,13 +18,13 @@ export const MovieContextProvider = ({ children }) => {
 		error: "",
 		filterCategory: "all",
 		currentPage: 1,
+		postPerPages: 20,
 	})
 
-	const { data, loading, error, filterCategory, currentPage } = state
+	const { data, loading, error, filterCategory, currentPage, postPerPages } =
+		state
 
 	const isMounted = useIsMounted()
-
-	const [postPerPages, setPostPerPages] = useState(20)
 
 	const indexOfLastPost = currentPage * postPerPages
 	const indexOfFirstPost = indexOfLastPost - postPerPages
@@ -50,6 +50,19 @@ export const MovieContextProvider = ({ children }) => {
 			})
 	}, [isMounted])
 
+	const list = currentPosts.filter((el) => {
+		if (filterCategory === "all") {
+			return true
+		}
+		return el.category.includes(filterCategory)
+	})
+
+	const [searchFilter, setSearchFilter] = useState("")
+	const handleFilter = (event) => {
+		event.preventDefault()
+		setSearchFilter(event.target.value)
+	}
+
 	return (
 		<MovieContext.Provider
 			value={{
@@ -57,7 +70,6 @@ export const MovieContextProvider = ({ children }) => {
 				filterCategory,
 				currentPage,
 				postPerPages,
-				setPostPerPages,
 				currentPosts,
 				indexOfLastPost,
 				indexOfFirstPost,
@@ -66,6 +78,9 @@ export const MovieContextProvider = ({ children }) => {
 				loading,
 				error,
 				dispatch,
+				list,
+				searchFilter,
+				handleFilter,
 			}}
 		>
 			{children}
