@@ -1,7 +1,6 @@
 import CardList from "./CardList.js"
 import { useMovie } from "../../context/MovieContext"
 import { CardContextProvider } from "../../context/CardContext.js"
-import { useState } from "react"
 
 const Card = () => {
 	let { list, searchFilter } = useMovie()

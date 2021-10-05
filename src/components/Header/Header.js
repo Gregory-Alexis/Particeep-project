@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useMovie } from "../../context/MovieContext"
 
 const Header = () => {
@@ -14,7 +13,7 @@ const Header = () => {
 						rel="noopener noreferrer"
 						target="_blank"
 						alt="Lien github"
-						className="underline hover:text-blue-400"
+						className="underline hover:text-blue-400 "
 					>
 						Particeep
 					</a>
@@ -26,7 +25,7 @@ const Header = () => {
 					type="text"
 					value={searchFilter}
 					onChange={handleFilter}
-					className="rounded-lg bg-blue-600 text-black text-sm"
+					className="rounded bg-blue-600 text-black text-sm focus:bg-white"
 					placeholder="    Search..."
 				/>
 			</div>
