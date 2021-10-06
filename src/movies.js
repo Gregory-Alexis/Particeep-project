@@ -1,7 +1,7 @@
 const movies = [
 	{
 		id: "1",
-		image: "https://www.pro-fil-online.fr/affiches/Ocean_s_8.jpg",
+		image: "https://fr.web.img3.acsta.net/pictures/18/05/14/12/19/5676009.jpg",
 		title: "Oceans 8",
 		category: "Comedy",
 		synopsis:
@@ -12,13 +12,12 @@ const movies = [
 	{
 		id: "2",
 		image:
-			"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fe72cec1-9589-4de7-8305-5727df7fc7e2/dceipx3-49fd463c-f8bb-46b3-bb6c-43ae24257a6a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZlNzJjZWMxLTk1ODktNGRlNy04MzA1LTU3MjdkZjdmYzdlMlwvZGNlaXB4My00OWZkNDYzYy1mOGJiLTQ2YjMtYmI2Yy00M2FlMjQyNTdhNmEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.y26yyYGR9PZzi5YnmTDH99Z4C2sUYb8BxhPTCNIWbG4",
-		title: "Midnight Sun",
+			"https://media.senscritique.com/media/000011284534/source_big/Les_Visiteurs.jpg",
+		title: "Les Visiteurs",
 		category: "Comedy",
-		synopsis: `Katie Price, 17 ans, est une adolescente comme les autres, ou presque. Elle ne peut en aucun cas être exposée à la lumière du jour, sous peine d’en mourir. La journée, elle compose et joue de la guitare, et observe le monde depuis sa chambre, notamment Charlie Reed, son voisin.
-               À la nuit tombée, ses rêves prennent vie ! Elle sort chanter dans la gare près de chez elle. Un soir, elle se retrouve face à Charlie. Lui est instantanément sous le charme et se met en tête de la revoir... Pourront-ils s’aimer au grand jour ?`,
-		likes: 225,
-		dislikes: 186,
+		synopsis: `En l'an de grace 1123, le comte de Montmirail et son fidèle écuyer, Jacquouille la Fripouille, se retrouvent propulsés en l'an 1992 apres avoir bu une potion magique fabriquée par l'enchanteur Eusaebius, censée leur permettre de se défaire d'un terrible sort.`,
+		likes: 7812,
+		dislikes: 1806,
 	},
 	{
 		id: "3",
@@ -97,13 +96,66 @@ const movies = [
 	{
 		id: "10",
 		image:
-			"https://www.ecranlarge.com/uploads/image/001/148/7xkj1acu40bjzlhvprilwjfvw7-555.jpg",
-		title: "Gone Girl",
+			"https://fr.web.img4.acsta.net/medias/nmedia/18/69/96/84/19151192.jpg",
+		title: "Shutter Island",
 		category: "Thriller",
 		synopsis:
-			"À l’occasion de son cinquième anniversaire de mariage, Nick Dunne signale la disparition de sa femme, Amy. Sous la pression de la police et l’affolement des médias, l’image du couple modèle commence à s’effriter. Très vite, les mensonges de Nick et son étrange comportement amènent tout le monde à se poser la même question : a-t-il tué sa femme ?",
+			"En 1954, le marshal Teddy Daniels et son coéquipier Chuck Aule sont envoyés enquêter sur l'île de Shutter Island, dans un hôpital psychiatrique où sont internés de dangereux criminels. L'une des patientes, Rachel Solando, a inexplicablement disparu. Comment la meurtrière a-t-elle pu sortir d'une cellule fermée de l'extérieur ? Le seul indice retrouvé dans la pièce est une feuille de papier sur laquelle on peut lire une suite de chiffres et de lettres sans signification apparente. Oeuvre cohérente d'une malade, ou cryptogramme ?",
+		likes: 5209,
+		dislikes: 1793,
+	},
+	{
+		id: "11",
+		image:
+			"https://fr.web.img3.acsta.net/medias/nmedia/18/85/31/58/20042068.jpg",
+		title: "Avengers",
+		category: "Action",
+		synopsis: `Lorsque Nick Fury, le directeur du S.H.I.E.L.D., l'organisation qui préserve la paix au plan mondial, cherche à former une équipe de choc pour empêcher la destruction du monde, Iron Man, Hulk, Thor, Captain America, Hawkeye et Black Widow répondent présents.
+Les Avengers ont beau constituer la plus fantastique des équipes, il leur reste encore à apprendre à travailler ensemble, et non les uns contre les autres, d'autant que le redoutable Loki a réussi à accéder au Cube Cosmique et à son pouvoir illimité`,
+		likes: 14786,
+		dislikes: 3200,
+	},
+	{
+		id: "12",
+		image:
+			"https://sadfran.files.wordpress.com/2018/07/87e99eb0661a04d5350105727ac3be23.jpg",
+		title: "Avatar",
+		category: "Science fiction",
+		synopsis: `Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des " pilotes " humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.
+Sous sa forme d'avatar, Jake peut de nouveau marcher. On lui confie une mission d'infiltration auprès des Na'vi, devenus un obstacle trop conséquent à l'exploitation du précieux minerai. Mais tout va changer lorsque Neytiri, une très belle Na'vi, sauve la vie de Jake`,
+		likes: 8741,
+		dislikes: 2789,
+	},
+	{
+		id: "13",
+		image: "https://m.media-amazon.com/images/I/81KkxZjm-lL._AC_SY679_.jpg",
+		title: "Star wars",
+		category: "Science fiction",
+		synopsis: `Avant de devenir un célèbre chevalier Jedi, et bien avant de se révéler l’âme la plus noire de la galaxie, Anakin Skywalker est un jeune esclave sur la planète Tatooine. La Force est déjà puissante en lui et il est un remarquable pilote de Podracer. Le maître Jedi Qui-Gon Jinn le découvre et entrevoit alors son immense potentiel.
+Pendant ce temps, l’armée de droïdes de l’insatiable Fédération du Commerce a envahi Naboo, une planète pacifique, dans le cadre d’un plan secret des Sith visant à accroître leur pouvoir. Pour défendre la reine de Naboo, Amidala, les chevaliers Jedi vont devoir affronter le redoutable Seigneur Sith, Dark Maul.`,
+		likes: 17009,
+		dislikes: 4862,
+	},
+	{
+		id: "14",
+		image: "https://m.media-amazon.com/images/I/51NB383CKkL._AC_SY679_.jpg",
+		title: "IT",
+		category: "Horror",
+		synopsis: `À Derry, dans le Maine, sept gamins ayant du mal à s'intégrer se sont regroupés au sein du "Club des Ratés". Rejetés par leurs camarades, ils sont les cibles favorites des gros durs de l'école. Ils ont aussi en commun d'avoir éprouvé leur plus grande terreur face à un terrible prédateur métamorphe qu'ils appellent "Ça"…
+Car depuis toujours, Derry est en proie à une créature qui émerge des égouts tous les 27 ans pour se nourrir des terreurs de ses victimes de choix : les enfants. Bien décidés à rester soudés, les Ratés tentent de surmonter leurs peurs pour enrayer un nouveau cycle meurtrier. Un cycle qui a commencé un jour de pluie lorsqu'un petit garçon poursuivant son bateau en papier s'est retrouvé face-à-face avec le Clown Grippe-Sou.`,
 		likes: 2209,
 		dislikes: 793,
+	},
+	{
+		id: "15",
+		image:
+			"https://fr.web.img2.acsta.net/medias/nmedia/18/66/93/20/19050019.jpg",
+		title: "FRIDAY 13",
+		category: "Horror",
+		synopsis:
+			"Un groupe d'adolescents découvre le camp de Crystal Lake en même temps que le terrifiant Jason Voorhees et ses intentions meurtrières",
+		likes: 4132,
+		dislikes: 3874,
 	},
 ]
 
