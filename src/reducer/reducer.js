@@ -53,6 +53,11 @@ export const reducer = (state, action) => {
 				...state,
 				postPerPages: action.payload,
 			}
+		case "SEARCH_FILTER":
+			return {
+				...state,
+				searchFilter: action.payload,
+			}
 
 		default:
 			throw new Error(`Unsupported action type ${action.type} in reducer`)

@@ -1,11 +1,16 @@
 import { useMovie } from "../../context/MovieContext"
 
 const Header = () => {
-	const { searchFilter, handleFilter } = useMovie()
+	const { searchFilter, dispatch } = useMovie()
+
+	const handleFilter = (event) => {
+		event.preventDefault()
+		dispatch({ type: "SEARCH_FILTER", payload: event.target.value })
+	}
 
 	return (
-		<div className="bg-blue-900 text-white text-center p-5 text-xl flex">
-			<div className="flex justify-center items-center ml-48 container">
+		<div className="bg-blue-900 text-white text-center p-5 text-xl lg:flex">
+			<div className="lg:flex lg:justify-center lg:items-center lg:ml-48 lg:container">
 				<h1>
 					React Movie Project by{" "}
 					<a
@@ -20,12 +25,12 @@ const Header = () => {
 				</h1>
 			</div>
 			<div>
-				<label htmlFor="filter"></label>
+				<label htmlFor="text"></label>
 				<input
 					type="text"
 					value={searchFilter}
 					onChange={handleFilter}
-					className="rounded bg-blue-600 text-black text-sm focus:bg-white"
+					className="rounded bg-gray-800 text-black text-sm focus:bg-white outline-none"
 					placeholder="    Search..."
 				/>
 			</div>

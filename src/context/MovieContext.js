@@ -1,10 +1,4 @@
-import {
-	createContext,
-	useReducer,
-	useContext,
-	useState,
-	useEffect,
-} from "react"
+import { createContext, useReducer, useContext, useEffect } from "react"
 import { reducer } from "../reducer/reducer"
 import { movies$ } from "../movies"
 import { useIsMounted } from "../hook/useIsMounted"
@@ -19,10 +13,18 @@ export const MovieContextProvider = ({ children }) => {
 		filterCategory: "all",
 		currentPage: 1,
 		postPerPages: 20,
+		searchFilter: "",
 	})
 
-	const { data, loading, error, filterCategory, currentPage, postPerPages } =
-		state
+	const {
+		data,
+		loading,
+		error,
+		filterCategory,
+		currentPage,
+		postPerPages,
+		searchFilter,
+	} = state
 
 	const isMounted = useIsMounted()
 
@@ -57,12 +59,6 @@ export const MovieContextProvider = ({ children }) => {
 		return el.category.includes(filterCategory)
 	})
 
-	const [searchFilter, setSearchFilter] = useState("")
-	const handleFilter = (event) => {
-		event.preventDefault()
-		setSearchFilter(event.target.value)
-	}
-
 	return (
 		<MovieContext.Provider
 			value={{
@@ -80,7 +76,6 @@ export const MovieContextProvider = ({ children }) => {
 				dispatch,
 				list,
 				searchFilter,
-				handleFilter,
 			}}
 		>
 			{children}
