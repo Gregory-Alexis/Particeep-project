@@ -32,11 +32,11 @@ const movies = [
 	{
 		id: "4",
 		image:
-			"https://media.senscritique.com/media/000017703233/source_big/Sans_un_bruit.jpg",
-		title: "Quiet Place",
+			"https://fr.web.img6.acsta.net/r_1280_720/pictures/20/02/24/08/55/5303085.jpg",
+		title: "A Quiet Place II",
 		category: "Thriller",
 		synopsis:
-			"Une famille tente de survivre sous la menace de mystérieuses créatures qui attaquent au moindre bruit. S’ils vous entendent, il est déjà trop tard.",
+			"Après les événements mortels survenus dans sa maison, la famille Abbot doit faire face au danger du monde extérieur. Pour survivre, ils doivent se battre en silence. Forcés à s’aventurer en terrain inconnu, ils réalisent que les créatures qui attaquent au moindre son ne sont pas la seule menace qui se dresse sur leur chemin.",
 		likes: 3578,
 		dislikes: 1230,
 	},
@@ -120,7 +120,7 @@ Les Avengers ont beau constituer la plus fantastique des équipes, il leur reste
 		image:
 			"https://sadfran.files.wordpress.com/2018/07/87e99eb0661a04d5350105727ac3be23.jpg",
 		title: "Avatar",
-		category: "Science fiction",
+		category: "Sci-Fi",
 		synopsis: `Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des " pilotes " humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.
 Sous sa forme d'avatar, Jake peut de nouveau marcher. On lui confie une mission d'infiltration auprès des Na'vi, devenus un obstacle trop conséquent à l'exploitation du précieux minerai. Mais tout va changer lorsque Neytiri, une très belle Na'vi, sauve la vie de Jake`,
 		likes: 8741,
@@ -128,9 +128,9 @@ Sous sa forme d'avatar, Jake peut de nouveau marcher. On lui confie une mission 
 	},
 	{
 		id: "13",
-		image: "https://m.media-amazon.com/images/I/81KkxZjm-lL._AC_SY679_.jpg",
-		title: "Star wars",
-		category: "Science fiction",
+		image: "https://fr.web.img4.acsta.net/pictures/20/10/29/10/18/4658850.jpg",
+		title: "Alita",
+		category: "Sci-Fi",
 		synopsis: `Avant de devenir un célèbre chevalier Jedi, et bien avant de se révéler l’âme la plus noire de la galaxie, Anakin Skywalker est un jeune esclave sur la planète Tatooine. La Force est déjà puissante en lui et il est un remarquable pilote de Podracer. Le maître Jedi Qui-Gon Jinn le découvre et entrevoit alors son immense potentiel.
 Pendant ce temps, l’armée de droïdes de l’insatiable Fédération du Commerce a envahi Naboo, une planète pacifique, dans le cadre d’un plan secret des Sith visant à accroître leur pouvoir. Pour défendre la reine de Naboo, Amidala, les chevaliers Jedi vont devoir affronter le redoutable Seigneur Sith, Dark Maul.`,
 		likes: 17009,
@@ -138,11 +138,11 @@ Pendant ce temps, l’armée de droïdes de l’insatiable Fédération du Comme
 	},
 	{
 		id: "14",
-		image: "https://m.media-amazon.com/images/I/51NB383CKkL._AC_SY679_.jpg",
-		title: "IT",
+		image: "https://fr.web.img4.acsta.net/pictures/16/08/03/14/54/309880.jpg",
+		title: "Lights Out",
 		category: "Horror",
-		synopsis: `À Derry, dans le Maine, sept gamins ayant du mal à s'intégrer se sont regroupés au sein du "Club des Ratés". Rejetés par leurs camarades, ils sont les cibles favorites des gros durs de l'école. Ils ont aussi en commun d'avoir éprouvé leur plus grande terreur face à un terrible prédateur métamorphe qu'ils appellent "Ça"…
-Car depuis toujours, Derry est en proie à une créature qui émerge des égouts tous les 27 ans pour se nourrir des terreurs de ses victimes de choix : les enfants. Bien décidés à rester soudés, les Ratés tentent de surmonter leurs peurs pour enrayer un nouveau cycle meurtrier. Un cycle qui a commencé un jour de pluie lorsqu'un petit garçon poursuivant son bateau en papier s'est retrouvé face-à-face avec le Clown Grippe-Sou.`,
+		synopsis: `Une famille en proie à une mystérieuse créature qui ne vit que dans le noir.
+Petite, Rebecca a toujours eu peur du noir. Mais quand elle est partie de chez elle, elle pensait avoir surmonté ses terreurs enfantines. Désormais, c'est au tour de son petit frère Martin d'être victime des mêmes phénomènes surnaturels qui ont failli lui faire perdre la raison. Car une créature terrifiante, mystérieusement liée à leur mère Sophie, rôde de nouveau dans la maison familiale. Cherchant à découvrir la vérité, Rebecca comprend que le danger est imminent… Surtout dans le noir.`,
 		likes: 2209,
 		dislikes: 793,
 	},

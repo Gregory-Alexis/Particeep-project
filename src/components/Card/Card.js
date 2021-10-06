@@ -3,7 +3,7 @@ import { useMovie } from "../../context/MovieContext"
 import { CardContextProvider } from "../../context/CardContext.js"
 
 const Card = () => {
-	let { list, searchFilter } = useMovie()
+	let { list, searchFilter, postPerPages } = useMovie()
 
 	let dataSearch = list.filter((item) => {
 		return Object.keys(item).some((key) =>
@@ -15,7 +15,12 @@ const Card = () => {
 	})
 
 	return (
-		<ul className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+		<ul
+			className={`py-5 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 ${
+				postPerPages === "4" ? "xl:grid-cols-4" : "xl:grid-cols-5"
+			}`}
+		>
+			{console.log(postPerPages)}
 			{dataSearch.map((el) => {
 				const { id, image, title, category, synopsis } = el
 				return (
