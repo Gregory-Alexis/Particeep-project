@@ -18,7 +18,7 @@ const Header = () => {
 						rel="noopener noreferrer"
 						target="_blank"
 						alt="Lien github"
-						className="underline hover:text-blue-400 "
+						className="underline hover:text-blue-300 "
 					>
 						Particeep
 					</a>
