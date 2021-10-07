@@ -21,7 +21,7 @@ const ActionPage = () => {
 	return (
 		<div>
 			<Header />
-			<div className="bg-gray-900 h-screen">
+			<div className="bg-gray-900 h-screen ">
 				<ul
 					className={` py-5 gap-y-6 grid md:grid-cols-2 lg:grid-cols-3 ${
 						postPerPages === "4" ? "xl:grid-cols-4" : "xl:grid-cols-5"

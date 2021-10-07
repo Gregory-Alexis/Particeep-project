@@ -3,7 +3,7 @@ import FilterCategories from "./FilterCategories"
 
 const AllSelect = () => {
 	return (
-		<div className="py-5 flex justify-evenly">
+		<div className="py-5 flex justify-between">
 			<FilterCategories />
 			<DisplayMovies />
 		</div>

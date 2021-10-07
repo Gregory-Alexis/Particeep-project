@@ -26,11 +26,11 @@ const FilterCategories = () => {
 	const [active, setActive] = useState(false)
 
 	return (
-		<div className="inline-block text-left dropdown">
+		<div className="inline-block text-left dropdown ml-5">
 			<div>
 				<button
 					type="button"
-					className="inline-flex justify-center w-full rounded-md border border-gray-600 shadow-sm px-4 py-2 text-white text-sm font-medium bg-opacity-100"
+					className="inline-flex justify-center w-full rounded-md border border-white shadow-sm px-4 py-2 text-white text-sm font-medium bg-opacity-100"
 					id="menu-button"
 					aria-expanded="true"
 					aria-haspopup="true"
@@ -43,6 +43,8 @@ const FilterCategories = () => {
 						viewBox="0 0 20 20"
 						fillRule="currentColor"
 						aria-hidden="true"
+						stroke="#ffffff"
+						fill="#ffffff"
 					>
 						<path
 							fillRule="evenodd"
@@ -54,7 +56,7 @@ const FilterCategories = () => {
 			</div>
 
 			<div
-				className="origin-top-right z-10 mt-2 w-48 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-gray-600"
+				className="origin-top-right absolute left-0 z-10 mt-2 w-48 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-white"
 				role="menu"
 				aria-orientation="vertical"
 				aria-labelledby="menu-button"
