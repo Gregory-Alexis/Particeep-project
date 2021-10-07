@@ -16,11 +16,10 @@ const Card = () => {
 
 	return (
 		<ul
-			className={`py-5 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 ${
+			className={` py-5 gap-y-6 grid md:grid-cols-2 lg:grid-cols-3 ${
 				postPerPages === "4" ? "xl:grid-cols-4" : "xl:grid-cols-5"
 			}`}
 		>
-			{console.log(postPerPages)}
 			{dataSearch.map((el) => {
 				const { id, image, title, category, synopsis } = el
 				return (

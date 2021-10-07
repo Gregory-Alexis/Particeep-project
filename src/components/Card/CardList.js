@@ -14,18 +14,18 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 	const [value, setValue] = useState((likes / (likes + disLikes)) * 100)
 
 	return (
-		<div className="flex m-auto w-80 h-full movie">
-			<img src={image} alt={`${title} film cover`} className="max-w-full" />
+		<div className="flex m-auto w-80 h-auto movie transform hover:scale-105 ease-in-out duration-500">
+			<img src={image} alt={`${title} film cover`} />
 
-			<div className="p-4 bg-white absolute bottom-0 movie-hover">
-				<div className="flex justify-between ">
+			<div className="p-4 bg-gray-200 absolute bottom-0 movie-hover ">
+				<div className="flex justify-between">
 					<h1 className="font-bold text-lg">{title}</h1>
 					<button
 						type="button"
 						className=" bg-blue-600 text-white rounded-md px-2 ease-in-out duration-200 hover:bg-red-600"
 						onClick={() => dispatch({ type: "DELETE", id })}
 					>
-						<small>Not interested</small>
+						<small>Supprimer</small>
 					</button>
 				</div>
 

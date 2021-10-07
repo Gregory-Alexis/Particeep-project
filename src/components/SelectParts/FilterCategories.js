@@ -1,7 +1,9 @@
+import { useState } from "react"
+import { Link } from "react-router-dom"
 import { useMovie } from "../../context/MovieContext"
 
 const FilterCategories = () => {
-	const { data, dispatch } = useMovie()
+	const { data } = useMovie()
 
 	const uniqueCategory = allCategory(data)
 
@@ -21,24 +23,61 @@ const FilterCategories = () => {
 		return listTagsUnique
 	}
 
+	const [active, setActive] = useState(false)
+
 	return (
-		<div>
-			<select
-				className="form-select ml-5 w-36 mt-1 text-center font-medium cursor-pointer rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
-				id="select"
-				onChange={(e) =>
-					dispatch({ type: "FILTER_CATEGORY", payload: e.target.value })
-				}
-			>
-				<option value="all" className="rounded">
+		<div className="inline-block text-left dropdown">
+			<div>
+				<button
+					type="button"
+					className="inline-flex justify-center w-full rounded-md border border-gray-600 shadow-sm px-4 py-2 text-white text-sm font-medium bg-opacity-100"
+					id="menu-button"
+					aria-expanded="true"
+					aria-haspopup="true"
+					onClick={() => setActive(!active)}
+				>
 					Genres
-				</option>
-				{uniqueCategory.map((el) => (
-					<option key={el} value={el}>
-						{el}
-					</option>
-				))}
-			</select>
+					<svg
+						className="-mr-1 ml-2 h-5 w-5"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+						fillRule="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							fillRule="evenodd"
+							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+							clipRule="evenodd"
+						/>
+					</svg>
+				</button>
+			</div>
+
+			<div
+				className="origin-top-right z-10 mt-2 w-48 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-gray-600"
+				role="menu"
+				aria-orientation="vertical"
+				aria-labelledby="menu-button"
+				tabIndex="-1"
+			>
+				<div className="py-1" role="none">
+					{uniqueCategory.map((el) => {
+						return (
+							<Link
+								to={`/categorie/${el}`}
+								className="text-white font-semibold block w-full text-sm text-center "
+								key={el}
+							>
+								<ul>
+									<li className="p-2 hover:bg-gray-700 hover:underline rounded-sm">
+										{el}
+									</li>
+								</ul>
+							</Link>
+						)
+					})}
+				</div>
+			</div>
 		</div>
 	)
 }

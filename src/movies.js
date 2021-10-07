@@ -32,7 +32,7 @@ const movies = [
 	{
 		id: "4",
 		image:
-			"https://fr.web.img6.acsta.net/r_1280_720/pictures/20/02/24/08/55/5303085.jpg",
+			"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/fb86fbeb5d9c6f7d743c54a46d3bd8eccd528068ceeead796f978dd116f935ac._RI_V_TTW_.jpg",
 		title: "A Quiet Place II",
 		category: "Thriller",
 		synopsis:
@@ -43,7 +43,7 @@ const movies = [
 	{
 		id: "5",
 		image:
-			"https://img.filmsactu.net/datas/films/c/r/creed-2/n/creed-2-5bdcb81225bfb.jpg",
+			"https://images-na.ssl-images-amazon.com/images/I/91pOO16kWpL._UR1200,1600_RI_.jpg",
 		title: "Creed II",
 		category: "Drame",
 		synopsis:
@@ -74,18 +74,17 @@ const movies = [
 	},
 	{
 		id: "8",
-		image: "https://miro.medium.com/max/500/0*xQirCtmOA-D3uAxQ.jpg",
-		title: "Seven",
-		category: "Thriller",
+		image: "https://fr.web.img5.acsta.net/pictures/16/08/25/12/14/261619.jpg",
+		title: "Les 7 Mercenaires",
+		category: "Action",
 		synopsis:
-			"Pour conclure sa carrière, l'inspecteur Somerset, vieux flic blasé, tombe à sept jours de la retraite sur un criminel peu ordinaire. John Doe, c'est ainsi que se fait appeler l'assassin, a decidé de nettoyer la societé des maux qui la rongent en commettant sept meurtres basés sur les sept pechés capitaux: la gourmandise, l'avarice, la paresse, l'orgueil, la luxure, l'envie et la colère.",
+			"L’industriel Bartholomew Bogue règne en maître sur la petite ville de Rose Creek. Pour mettre fin au despotisme de l’homme d’affaires, les habitants, désespérés, engagent sept hors-la-loi, chasseurs de primes, joueurs et tueurs à gages – Sam Chisolm, Josh Farraday, Goodnight Robicheaux, Jack Horne, Billy Rocks, Vasquez, et Red Harvest. Alors qu’ils se préparent pour ce qui s’annonce comme une confrontation sans pitié, ces sept mercenaires prennent conscience qu’ils se battent pour bien autre chose que l’argent.",
 		likes: 7410,
 		dislikes: 2369,
 	},
 	{
 		id: "9",
-		image:
-			"https://static.displate.com/857x1200/displate/2020-03-09/9cea2dbc90e41568d787fb7608fc94d1_f67f0ea30c94dcda84f0150e858ef504.jpg",
+		image: "https://images-na.ssl-images-amazon.com/images/I/81O3tKzTeyL.jpg",
 		title: "Inception",
 		category: "Thriller",
 		synopsis:
@@ -96,7 +95,7 @@ const movies = [
 	{
 		id: "10",
 		image:
-			"https://fr.web.img4.acsta.net/medias/nmedia/18/69/96/84/19151192.jpg",
+			"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/4651306db4501622166aa68b058b20e7a3c598bcfebea4ebc56733301d54fdae._RI_V_TTW_.jpg",
 		title: "Shutter Island",
 		category: "Thriller",
 		synopsis:
@@ -107,7 +106,7 @@ const movies = [
 	{
 		id: "11",
 		image:
-			"https://fr.web.img3.acsta.net/medias/nmedia/18/85/31/58/20042068.jpg",
+			"https://cdn.imweb.me/upload/S20200101089e3abea1618/1c971ebc3951a.png",
 		title: "Avengers",
 		category: "Action",
 		synopsis: `Lorsque Nick Fury, le directeur du S.H.I.E.L.D., l'organisation qui préserve la paix au plan mondial, cherche à former une équipe de choc pour empêcher la destruction du monde, Iron Man, Hulk, Thor, Captain America, Hawkeye et Black Widow répondent présents.
@@ -118,7 +117,7 @@ Les Avengers ont beau constituer la plus fantastique des équipes, il leur reste
 	{
 		id: "12",
 		image:
-			"https://sadfran.files.wordpress.com/2018/07/87e99eb0661a04d5350105727ac3be23.jpg",
+			"https://musicsheetcovers.s3.eu-west-3.amazonaws.com/couv53/155/G0001092155.jpg",
 		title: "Avatar",
 		category: "Sci-Fi",
 		synopsis: `Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des " pilotes " humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.
@@ -149,11 +148,11 @@ Petite, Rebecca a toujours eu peur du noir. Mais quand elle est partie de chez e
 	{
 		id: "15",
 		image:
-			"https://fr.web.img2.acsta.net/medias/nmedia/18/66/93/20/19050019.jpg",
+			"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/8ea8d34063248e698fbd3f9038e326696faaef744f6de4115058a5fec1536a10._RI_V_TTW_.jpg",
 		title: "FRIDAY 13",
 		category: "Horror",
 		synopsis:
-			"Un groupe d'adolescents découvre le camp de Crystal Lake en même temps que le terrifiant Jason Voorhees et ses intentions meurtrières",
+			"Jason Voorhes, toujours affublé de son masque de hockey, suit une classe d'étudiants à New York, bien décidé à semer la terreur.",
 		likes: 4132,
 		dislikes: 3874,
 	},

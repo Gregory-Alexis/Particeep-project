@@ -3,15 +3,16 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		boxShadow: {
-			black: "2px 3px 3px 1px rgba(0, 0, 0)",
+			black: "0px 0px 3px 5px rgba(0, 0, 0)",
 			none: "0 0 0 0 rgba(255, 255, 255)",
+			grey: "0px 0px 2px 4px rgba(87, 87, 87)",
 		},
 
 		extend: {},
 	},
 	variants: {
 		extend: {
-			transform: ["hover"],
+			transform: ["focus", "hover"],
 		},
 	},
 	plugins: [
