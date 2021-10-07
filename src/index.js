@@ -26,7 +26,7 @@ ReactDOM.render(
 					<Route path="/categorie/Horror" component={HorrorPage} />
 					<Route path="/categorie/Action" component={ActionPage} />
 					<Route path="/categorie/Sci-Fi" component={SciFiPage} />
-
+					<Route exact path="/" component={App} />
 					<App />
 				</Switch>
 			</Router>

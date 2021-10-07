@@ -1,3 +1,4 @@
+import BackHome from "../components/Button/BackHome"
 import CardList from "../components/Card/CardList"
 import Header from "../components/Header/Header"
 import { CardContextProvider } from "../context/CardContext"
@@ -21,6 +22,7 @@ const DramPage = () => {
 		<div>
 			<Header />
 			<div className="bg-gray-900 h-screen">
+				<BackHome />
 				<ul
 					className={` py-5 gap-y-6 grid md:grid-cols-2 lg:grid-cols-3 ${
 						postPerPages === "4" ? "xl:grid-cols-4" : "xl:grid-cols-5"
