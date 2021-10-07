@@ -30,7 +30,7 @@ const Header = () => {
 					type="text"
 					value={searchFilter}
 					onChange={handleFilter}
-					className="rounded bg-gray-800 text-black text-sm focus:bg-white outline-none placeholder-white focus:placeholder-gray-400"
+					className="rounded bg-gray-800 text-black text-sm focus:bg-white outline-none placeholder-white focus:placeholder-gray-400 "
 					placeholder="    Search..."
 				/>
 			</div>

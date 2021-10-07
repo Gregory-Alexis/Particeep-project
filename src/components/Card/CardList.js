@@ -14,8 +14,8 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 	const [value, setValue] = useState((likes / (likes + disLikes)) * 100)
 
 	return (
-		<div className="flex m-auto w-72 h-full movie transform hover:scale-105 ease-in-out duration-500">
-			<img src={image} alt={`${title} film cover`} />
+		<div className="flex m-auto movie transform hover:scale-105 ease-in-out duration-500">
+			<img className="w-80 h-96" src={image} alt={`${title} film cover`} />
 
 			<div className="p-4 bg-gray-200 absolute bottom-0 movie-hover ">
 				<div className="flex justify-between">

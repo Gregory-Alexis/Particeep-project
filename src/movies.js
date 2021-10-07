@@ -1,7 +1,8 @@
 const movies = [
 	{
 		id: "1",
-		image: "https://fr.web.img3.acsta.net/pictures/18/05/14/12/19/5676009.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633639515/ocean8_balqvk.webp",
 		title: "Oceans 8",
 		category: "Comedy",
 		synopsis:
@@ -12,16 +13,18 @@ const movies = [
 	{
 		id: "2",
 		image:
-			"https://media.senscritique.com/media/000011284534/source_big/Les_Visiteurs.jpg",
-		title: "Les Visiteurs",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641069/AsterixEtObelix_jpcrax.webp",
+		title: "Asterix et Obelix",
 		category: "Comedy",
-		synopsis: `En l'an de grace 1123, le comte de Montmirail et son fidèle écuyer, Jacquouille la Fripouille, se retrouvent propulsés en l'an 1992 apres avoir bu une potion magique fabriquée par l'enchanteur Eusaebius, censée leur permettre de se défaire d'un terrible sort.`,
+		synopsis: `Cléopâtre, la reine d’Égypte, décide, pour défier l'Empereur romain Jules César, de construire en trois mois un palais somptueux en plein désert. Si elle y parvient, celui-ci devra concéder publiquement que le peuple égyptien est le plus grand de tous les peuples. Pour ce faire, Cléopâtre fait appel à Numérobis, un architecte d'avant-garde plein d'énergie. S'il réussit, elle le couvrira d'or. S'il échoue, elle le jettera aux crocodiles.
+Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil ami Panoramix. Le druide fait le voyage en Égypte avec Astérix et Obélix. De son côté, Amonbofis, l'architecte officiel de Cléopâtre, jaloux que la reine ait choisi Numérobis pour construire le palais, va tout mettre en œuvre pour faire échouer son concurrent.`,
 		likes: 7812,
 		dislikes: 1806,
 	},
 	{
 		id: "3",
-		image: "https://fr.web.img6.acsta.net/pictures/18/04/13/15/09/0323902.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633639229/indestructibles_fxvfwc.webp",
 		title: "Indestructibles 2",
 		category: "Animation",
 		synopsis:
@@ -32,7 +35,7 @@ const movies = [
 	{
 		id: "4",
 		image:
-			"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/fb86fbeb5d9c6f7d743c54a46d3bd8eccd528068ceeead796f978dd116f935ac._RI_V_TTW_.jpg",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640528/A_Quiet_Place_2_nurwrx.webp",
 		title: "A Quiet Place II",
 		category: "Thriller",
 		synopsis:
@@ -43,7 +46,7 @@ const movies = [
 	{
 		id: "5",
 		image:
-			"https://images-na.ssl-images-amazon.com/images/I/91pOO16kWpL._UR1200,1600_RI_.jpg",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640609/Creed-2_l0skku.webp",
 		title: "Creed II",
 		category: "Drame",
 		synopsis:
@@ -54,7 +57,7 @@ const movies = [
 	{
 		id: "6",
 		image:
-			"https://lumiere-a.akamaihd.net/v1/images/p_junglecruise_19736_5a2634c5.jpeg?region=0%2C0%2C540%2C810",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633639372/Jungle-Cruise_imeoey.webp",
 		title: "Jungle Cruise",
 		category: "Aventure",
 		synopsis:
@@ -64,7 +67,8 @@ const movies = [
 	},
 	{
 		id: "7",
-		image: "https://m.media-amazon.com/images/I/91b-IaB9ILL._AC_SY606_.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640568/Conjuring_2_gyenpa.webp",
 		title: "The Conjuring II",
 		category: "Horror",
 		synopsis:
@@ -74,7 +78,8 @@ const movies = [
 	},
 	{
 		id: "8",
-		image: "https://fr.web.img5.acsta.net/pictures/16/08/25/12/14/261619.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641220/Mercenaires_u2kbxw.webp",
 		title: "Les 7 Mercenaires",
 		category: "Action",
 		synopsis:
@@ -84,7 +89,8 @@ const movies = [
 	},
 	{
 		id: "9",
-		image: "https://images-na.ssl-images-amazon.com/images/I/81O3tKzTeyL.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640666/inception_vnv2wb.webp",
 		title: "Inception",
 		category: "Thriller",
 		synopsis:
@@ -95,7 +101,7 @@ const movies = [
 	{
 		id: "10",
 		image:
-			"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/4651306db4501622166aa68b058b20e7a3c598bcfebea4ebc56733301d54fdae._RI_V_TTW_.jpg",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641349/ShutterIsland_ot6cvr.webp",
 		title: "Shutter Island",
 		category: "Thriller",
 		synopsis:
@@ -106,7 +112,7 @@ const movies = [
 	{
 		id: "11",
 		image:
-			"https://cdn.imweb.me/upload/S20200101089e3abea1618/1c971ebc3951a.png",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641406/Avengers_wbhocg.webp",
 		title: "Avengers",
 		category: "Action",
 		synopsis: `Lorsque Nick Fury, le directeur du S.H.I.E.L.D., l'organisation qui préserve la paix au plan mondial, cherche à former une équipe de choc pour empêcher la destruction du monde, Iron Man, Hulk, Thor, Captain America, Hawkeye et Black Widow répondent présents.
@@ -117,7 +123,7 @@ Les Avengers ont beau constituer la plus fantastique des équipes, il leur reste
 	{
 		id: "12",
 		image:
-			"https://musicsheetcovers.s3.eu-west-3.amazonaws.com/couv53/155/G0001092155.jpg",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641487/Avatar_dyzcmi.webp",
 		title: "Avatar",
 		category: "Sci-Fi",
 		synopsis: `Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des " pilotes " humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.
@@ -127,7 +133,8 @@ Sous sa forme d'avatar, Jake peut de nouveau marcher. On lui confie une mission 
 	},
 	{
 		id: "13",
-		image: "https://fr.web.img4.acsta.net/pictures/20/10/29/10/18/4658850.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641607/Alita_nomqr1.webp",
 		title: "Alita",
 		category: "Sci-Fi",
 		synopsis: `Avant de devenir un célèbre chevalier Jedi, et bien avant de se révéler l’âme la plus noire de la galaxie, Anakin Skywalker est un jeune esclave sur la planète Tatooine. La Force est déjà puissante en lui et il est un remarquable pilote de Podracer. Le maître Jedi Qui-Gon Jinn le découvre et entrevoit alors son immense potentiel.
@@ -137,7 +144,8 @@ Pendant ce temps, l’armée de droïdes de l’insatiable Fédération du Comme
 	},
 	{
 		id: "14",
-		image: "https://fr.web.img4.acsta.net/pictures/16/08/03/14/54/309880.jpg",
+		image:
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641661/LO_or96di.webp",
 		title: "Lights Out",
 		category: "Horror",
 		synopsis: `Une famille en proie à une mystérieuse créature qui ne vit que dans le noir.
@@ -148,7 +156,7 @@ Petite, Rebecca a toujours eu peur du noir. Mais quand elle est partie de chez e
 	{
 		id: "15",
 		image:
-			"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/8ea8d34063248e698fbd3f9038e326696faaef744f6de4115058a5fec1536a10._RI_V_TTW_.jpg",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641727/FRIDAY_u7xs3p.webp",
 		title: "FRIDAY 13",
 		category: "Horror",
 		synopsis:

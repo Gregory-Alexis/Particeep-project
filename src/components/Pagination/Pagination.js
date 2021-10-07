@@ -19,7 +19,7 @@ const Pagination = () => {
 
 	return (
 		<footer className="bg-white px-4 py-3 flex items-center justify-between border-t w-full sm:px-6">
-			<div className=" flex-1 flex items-center justify-between sm:hidden">
+			<div className=" flex-1 flex items-center justify-between lg:hidden">
 				<button
 					onClick={() =>
 						dispatch({ type: "CURRENT_PAGE", payload: currentPage - 1 })
@@ -39,7 +39,7 @@ const Pagination = () => {
 					Next
 				</button>
 			</div>
-			<div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+			<div className="6xl:hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
 				<div>
 					<p className="text-sm text-gray-700">
 						Showing <span className="font-medium">{indexOfFirstPost + 1}</span>{" "}
