@@ -1,7 +1,7 @@
 import LikeButton from "../../assets/like.svg"
 import { useCard } from "../../context/CardContext"
 
-const Likes = ({ likes, disLikes, setValue, value }) => {
+const Likes = ({ likes, disLikes, setValue }) => {
 	const { toggleLikes, CardDispatch } = useCard()
 
 	const handleOnClickCount = () => {

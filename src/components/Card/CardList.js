@@ -49,7 +49,6 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 				<div className="flex justify-between pt-5">
 					<Likes
 						setValue={setValue}
-						value={value}
 						likes={likes}
 						disLikes={disLikes}
 						movie={movie}
@@ -58,7 +57,6 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 					/>
 					<Dislikes
 						setValue={setValue}
-						value={value}
 						likes={likes}
 						disLikes={disLikes}
 						setLikes={setLikes}

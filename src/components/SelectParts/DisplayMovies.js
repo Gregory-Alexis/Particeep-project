@@ -33,18 +33,18 @@ const DisplayMovies = () => {
 			</div>
 
 			<div
-				className="origin-top-left absolute right-0 z-10 mt-2 w-36 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-white"
+				className="origin-top-left absolute right-0 z-10 mt-2 w-36 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-white "
 				role="menu"
 				aria-orientation="vertical"
 				aria-labelledby="menu-button"
 				tabIndex="-1"
 			>
 				<div
-					className="py-1 text-center flex-col items-center flex"
+					className="py-1 text-center flex-col items-center flex "
 					role="none"
 				>
 					<button
-						className="text-white hover:underline"
+						className="text-white hover:underline hover:bg-gray-700 rounded-sm w-full"
 						value="4"
 						onClick={(e) =>
 							dispatch({ type: "POST_PER_PAGES", payload: e.target.value })
@@ -53,7 +53,7 @@ const DisplayMovies = () => {
 						4
 					</button>
 					<button
-						className="text-white hover:underline"
+						className="text-white hover:underline hover:bg-gray-700 rounded-sm w-full"
 						value="8"
 						onClick={(e) =>
 							dispatch({ type: "POST_PER_PAGES", payload: e.target.value })
@@ -62,7 +62,7 @@ const DisplayMovies = () => {
 						8
 					</button>
 					<button
-						className="text-white hover:underline"
+						className="text-white hover:underline hover:bg-gray-700 rounded-sm w-full"
 						value="12"
 						onClick={(e) =>
 							dispatch({ type: "POST_PER_PAGES", payload: e.target.value })
