@@ -14,25 +14,31 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 	const [value, setValue] = useState((likes / (likes + disLikes)) * 100)
 
 	return (
-		<div className="flex m-auto movie transform hover:scale-105 ease-in-out duration-500 w-72">
-			<img className="w-80 h-96" src={image} alt={`${title} film cover`} />
+		<div className="flex m-auto justify-center movie transform hover:scale-105 ease-in-out duration-500 w-60 md:w-64 lg:w-72 xl:w-80 h-full">
+			<img
+				className="w-60 md:w-64 lg:w-72 xl:w-80 h-full"
+				src={image}
+				alt={`${title} film cover`}
+			/>
 
-			<div className="p-4 bg-gray-200 absolute bottom-0 movie-hover ">
+			<div className="p-2 bg-gray-200 absolute bottom-0 movie-hover ">
 				<div className="flex justify-between">
-					<h1 className="font-bold text-lg">{title}</h1>
-					<button
-						type="button"
-						className=" bg-blue-600 text-white rounded-md px-2 ease-in-out duration-200 hover:bg-red-600"
-						onClick={() => dispatch({ type: "DELETE", id })}
-					>
-						<small>Supprimer</small>
-					</button>
+					<div>
+						<h1 className="font-bold text-lg">{title}</h1>
+					</div>
+					<div>
+						<button
+							type="button"
+							className=" bg-blue-600 text-white rounded-md px-1 ease-in-out duration-200 hover:bg-red-600"
+							onClick={() => dispatch({ type: "DELETE", id })}
+						>
+							<small>Supprimer</small>
+						</button>
+					</div>
 				</div>
-
-				<p className="text-gray-900 opacity-40 font-bold  ">
+				<p className="text-gray-900 opacity-40 font-bold ">
 					<small>{category}</small>
 				</p>
-
 				<p className="pt-2 text-sm ">
 					{readMore ? synopsis : `${synopsis.slice(0, 100)}...`}{" "}
 					<button
