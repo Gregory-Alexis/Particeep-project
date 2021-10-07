@@ -13,7 +13,7 @@ const movies = [
 	{
 		id: "2",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641069/AsterixEtObelix_jpcrax.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/v1633642831/AsterixEtObelix_gzigee.webp",
 		title: "Asterix et Obelix",
 		category: "Comedy",
 		synopsis: `Cléopâtre, la reine d’Égypte, décide, pour défier l'Empereur romain Jules César, de construire en trois mois un palais somptueux en plein désert. Si elle y parvient, celui-ci devra concéder publiquement que le peuple égyptien est le plus grand de tous les peuples. Pour ce faire, Cléopâtre fait appel à Numérobis, un architecte d'avant-garde plein d'énergie. S'il réussit, elle le couvrira d'or. S'il échoue, elle le jettera aux crocodiles.
