@@ -31,7 +31,7 @@ const FilterCategories = () => {
 				<button
 					type="button"
 					className="inline-flex justify-center w-full rounded-md border border-white shadow-sm px-4 py-2 text-white text-sm font-medium bg-opacity-100"
-					id="menu-button"
+					id="filter-category"
 					aria-expanded="true"
 					aria-haspopup="true"
 					onClick={() => setActive(!active)}
@@ -59,23 +59,22 @@ const FilterCategories = () => {
 				className="origin-top-right absolute left-0 z-10 mt-2 w-48 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-white"
 				role="menu"
 				aria-orientation="vertical"
-				aria-labelledby="menu-button"
+				aria-labelledby="filter-category"
 				tabIndex="-1"
 			>
 				<div className="py-1" role="none">
 					{uniqueCategory.map((el) => {
 						return (
-							<Link
-								to={`/categorie/${el}`}
-								className="text-white font-semibold block w-full text-sm text-center "
-								key={el}
-							>
-								<ul>
+							<ul key={el}>
+								<Link
+									to={`/categorie/${el}`}
+									className="text-white font-semibold block w-full text-sm text-center "
+								>
 									<li className="p-2 hover:bg-gray-700 hover:underline rounded-sm">
 										{el}
 									</li>
-								</ul>
-							</Link>
+								</Link>
+							</ul>
 						)
 					})}
 				</div>

@@ -60,20 +60,19 @@ const Pagination = () => {
 					>
 						{pageNumber.map((number) => {
 							return (
-								<li
-									key={number}
-									className="list-none border px-4 py-2 border-gray-400 rounded-sm"
-								>
-									<button
-										type="button"
-										onClick={(e) => {
-											e.preventDefault()
-											paginate(number)
-										}}
-									>
-										{number}
-									</button>
-								</li>
+								<ul key={number}>
+									<li className="list-none border px-4 py-2 border-gray-400 rounded-sm">
+										<button
+											type="button"
+											onClick={(e) => {
+												e.preventDefault()
+												paginate(number)
+											}}
+										>
+											{number}
+										</button>
+									</li>
+								</ul>
 							)
 						})}
 					</nav>

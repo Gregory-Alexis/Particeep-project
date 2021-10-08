@@ -14,11 +14,13 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 	const [value, setValue] = useState((likes / (likes + disLikes)) * 100)
 
 	return (
-		<div className="flex m-auto justify-center movie transform hover:scale-105 ease-in-out duration-500 w-60 md:w-64 lg:w-72 xl:w-80 h-full">
+		<div className="flex m-auto justify-center movie transform hover:scale-105 ease-in-out duration-500 w-60 sm:w-64 lg:w-72 h-full">
 			<img
-				className="w-60 md:w-64 lg:w-72 xl:w-80 h-full"
+				className=" sm:w-64 lg:w-72 lg:h-96  "
 				src={image}
 				alt={`${title} film cover`}
+				width="240"
+				height="320"
 			/>
 
 			<div className="p-2 bg-gray-200 absolute bottom-0 movie-hover ">

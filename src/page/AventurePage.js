@@ -24,7 +24,7 @@ const AventurePage = () => {
 			<Header />
 			<div className="bg-gray-900 h-screen">
 				<BackHome />
-				<ul
+				<div
 					className={` py-5 gap-y-6 grid md:grid-cols-2 lg:grid-cols-3 ${
 						postPerPages === "4" ? "xl:grid-cols-4" : "xl:grid-cols-5"
 					}`}
@@ -32,21 +32,23 @@ const AventurePage = () => {
 					{newData.map((el) => {
 						const { id, image, title, category, synopsis } = el
 						return (
-							<li key={id}>
-								<CardContextProvider>
-									<CardList
-										id={id}
-										image={image}
-										title={title}
-										category={category}
-										synopsis={synopsis}
-										movie={el}
-									/>
-								</CardContextProvider>
-							</li>
+							<ul key={id}>
+								<li>
+									<CardContextProvider>
+										<CardList
+											id={id}
+											image={image}
+											title={title}
+											category={category}
+											synopsis={synopsis}
+											movie={el}
+										/>
+									</CardContextProvider>
+								</li>
+							</ul>
 						)
 					})}
-				</ul>
+				</div>
 			</div>
 		</div>
 	)

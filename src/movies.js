@@ -2,7 +2,7 @@ const movies = [
 	{
 		id: "1",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633639515/ocean8_balqvk.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633639515/ocean8_balqvk.webp",
 		title: "Oceans 8",
 		category: "Comedy",
 		synopsis:
@@ -13,7 +13,7 @@ const movies = [
 	{
 		id: "2",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633642831/AsterixEtObelix_gzigee.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633642831/AsterixEtObelix_gzigee.webp",
 		title: "Asterix et Obelix",
 		category: "Comedy",
 		synopsis: `Cléopâtre, la reine d’Égypte, décide, pour défier l'Empereur romain Jules César, de construire en trois mois un palais somptueux en plein désert. Si elle y parvient, celui-ci devra concéder publiquement que le peuple égyptien est le plus grand de tous les peuples. Pour ce faire, Cléopâtre fait appel à Numérobis, un architecte d'avant-garde plein d'énergie. S'il réussit, elle le couvrira d'or. S'il échoue, elle le jettera aux crocodiles.
@@ -24,7 +24,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "3",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633639229/indestructibles_fxvfwc.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633639229/indestructibles_fxvfwc.webp",
 		title: "Indestructibles 2",
 		category: "Animation",
 		synopsis:
@@ -35,7 +35,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "4",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640528/A_Quiet_Place_2_nurwrx.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633640528/A_Quiet_Place_2_nurwrx.webp",
 		title: "A Quiet Place II",
 		category: "Thriller",
 		synopsis:
@@ -46,7 +46,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "5",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640609/Creed-2_l0skku.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633640609/Creed-2_l0skku.webp",
 		title: "Creed II",
 		category: "Drame",
 		synopsis:
@@ -57,7 +57,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "6",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633639372/Jungle-Cruise_imeoey.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633639372/Jungle-Cruise_imeoey.webp",
 		title: "Jungle Cruise",
 		category: "Aventure",
 		synopsis:
@@ -68,7 +68,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "7",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640568/Conjuring_2_gyenpa.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633640568/Conjuring_2_gyenpa.webp",
 		title: "The Conjuring II",
 		category: "Horror",
 		synopsis:
@@ -79,7 +79,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "8",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641220/Mercenaires_u2kbxw.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641220/Mercenaires_u2kbxw.webp",
 		title: "Les 7 Mercenaires",
 		category: "Action",
 		synopsis:
@@ -90,7 +90,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "9",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633640666/inception_vnv2wb.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633640666/inception_vnv2wb.webp",
 		title: "Inception",
 		category: "Thriller",
 		synopsis:
@@ -101,7 +101,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "10",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641349/ShutterIsland_ot6cvr.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641349/ShutterIsland_ot6cvr.webp",
 		title: "Shutter Island",
 		category: "Thriller",
 		synopsis:
@@ -112,7 +112,7 @@ Celui-ci, conscient du défi à relever, cherche de l'aide auprès de son vieil 
 	{
 		id: "11",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641406/Avengers_wbhocg.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641406/Avengers_wbhocg.webp",
 		title: "Avengers",
 		category: "Action",
 		synopsis: `Lorsque Nick Fury, le directeur du S.H.I.E.L.D., l'organisation qui préserve la paix au plan mondial, cherche à former une équipe de choc pour empêcher la destruction du monde, Iron Man, Hulk, Thor, Captain America, Hawkeye et Black Widow répondent présents.
@@ -123,7 +123,7 @@ Les Avengers ont beau constituer la plus fantastique des équipes, il leur reste
 	{
 		id: "12",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641487/Avatar_dyzcmi.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641487/Avatar_dyzcmi.webp",
 		title: "Avatar",
 		category: "Sci-Fi",
 		synopsis: `Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des " pilotes " humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.
@@ -134,7 +134,7 @@ Sous sa forme d'avatar, Jake peut de nouveau marcher. On lui confie une mission 
 	{
 		id: "13",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641607/Alita_nomqr1.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641607/Alita_nomqr1.webp",
 		title: "Alita",
 		category: "Sci-Fi",
 		synopsis: `Avant de devenir un célèbre chevalier Jedi, et bien avant de se révéler l’âme la plus noire de la galaxie, Anakin Skywalker est un jeune esclave sur la planète Tatooine. La Force est déjà puissante en lui et il est un remarquable pilote de Podracer. Le maître Jedi Qui-Gon Jinn le découvre et entrevoit alors son immense potentiel.
@@ -145,7 +145,7 @@ Pendant ce temps, l’armée de droïdes de l’insatiable Fédération du Comme
 	{
 		id: "14",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641661/LO_or96di.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641661/LO_or96di.webp",
 		title: "Lights Out",
 		category: "Horror",
 		synopsis: `Une famille en proie à une mystérieuse créature qui ne vit que dans le noir.
@@ -156,7 +156,7 @@ Petite, Rebecca a toujours eu peur du noir. Mais quand elle est partie de chez e
 	{
 		id: "15",
 		image:
-			"https://res.cloudinary.com/dew6sgune/image/upload/v1633641727/FRIDAY_u7xs3p.webp",
+			"https://res.cloudinary.com/dew6sgune/image/upload/c_scale,h_320,w_240/v1633641727/FRIDAY_u7xs3p.webp",
 		title: "FRIDAY 13",
 		category: "Horror",
 		synopsis:

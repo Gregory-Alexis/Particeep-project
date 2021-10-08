@@ -9,7 +9,7 @@ const DisplayMovies = () => {
 				<button
 					type="button"
 					className="inline-flex justify-center w-full rounded-md border border-white shadow-sm px-4 py-2 text-white text-sm font-medium bg-opacity-100"
-					id="menu-button"
+					id="display-movie"
 					aria-expanded="true"
 					aria-haspopup="true"
 				>
@@ -36,7 +36,7 @@ const DisplayMovies = () => {
 				className="origin-top-left absolute right-0 z-10 mt-2 w-36 rounded-md shadow-lg bg-gray-900  dropdown-menu bg-opacity-90 border border-white "
 				role="menu"
 				aria-orientation="vertical"
-				aria-labelledby="menu-button"
+				aria-labelledby="display-movie"
 				tabIndex="-1"
 			>
 				<div
