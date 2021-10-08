@@ -8,12 +8,14 @@ const FilterCategories = () => {
 	const uniqueCategory = allCategory(data)
 
 	function allCategory(list) {
+		// récupère toute les catégories
 		let listTotal = []
 		for (let element of list) {
 			if ("category" in element) {
 				listTotal = listTotal.concat(element.category)
 			}
 		}
+		// si la catégorie n'est pas déjà inclut dans l'array "listTagsUnique" alors on l'ajoute
 		const listTagsUnique = []
 		listTotal.forEach((el) => {
 			if (!listTagsUnique.includes(el)) {

@@ -53,9 +53,11 @@ export const MovieContextProvider = ({ children }) => {
 	}, [isMounted])
 
 	const list = currentPosts.filter((el) => {
+		// retourne toute les cartes si filterCategory === true
 		if (filterCategory === "all") {
 			return true
 		}
+		// Sinon on retourne la catégorie sélectionnée
 		return el.category.includes(filterCategory)
 	})
 

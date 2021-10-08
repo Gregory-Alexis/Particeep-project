@@ -11,6 +11,7 @@ const CardList = ({ id, image, title, category, synopsis, movie }) => {
 
 	const [likes, setLikes] = useState(movie.likes)
 	const [disLikes, setDisLikes] = useState(movie.dislikes)
+	// valeur initial, en pourcentage, de likes
 	const [value, setValue] = useState((likes / (likes + disLikes)) * 100)
 
 	return (

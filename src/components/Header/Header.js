@@ -3,8 +3,7 @@ import { useMovie } from "../../context/MovieContext"
 const Header = () => {
 	const { searchFilter, dispatch } = useMovie()
 
-	const handleFilter = (event) => {
-		event.preventDefault()
+	const handleSearchFilter = (event) => {
 		dispatch({ type: "SEARCH_FILTER", payload: event.target.value })
 	}
 
@@ -29,7 +28,7 @@ const Header = () => {
 				<input
 					type="text"
 					value={searchFilter}
-					onChange={handleFilter}
+					onChange={handleSearchFilter}
 					className="rounded bg-gray-800 text-black text-sm focus:bg-white outline-none placeholder-white focus:placeholder-gray-400 "
 					placeholder="    Search..."
 				/>

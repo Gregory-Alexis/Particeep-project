@@ -64,8 +64,7 @@ const Pagination = () => {
 									<li className="list-none border px-4 py-2 border-gray-400 rounded-sm">
 										<button
 											type="button"
-											onClick={(e) => {
-												e.preventDefault()
+											onClick={() => {
 												paginate(number)
 											}}
 										>

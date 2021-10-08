@@ -5,6 +5,7 @@ import { CardContextProvider } from "../../context/CardContext.js"
 const Card = () => {
 	let { list, searchFilter, postPerPages } = useMovie()
 
+	// filtre permettant de rechercher un film par son titre ou sa catégorie
 	let dataSearch = list.filter((item) => {
 		return Object.keys(item).some((key) =>
 			item[key]

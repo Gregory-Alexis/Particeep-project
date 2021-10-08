@@ -8,7 +8,8 @@ const Dislikes = ({ disLikes, likes, setValue }) => {
 		CardDispatch({ type: "TOGGLE_DISLIKES", payload: !toggleDisLikes })
 		CardDispatch({ type: "TOGGLE_LIKES", payload: false })
 		toggleDisLikes
-			? setValue((likes / (likes + disLikes)) * 100)
+			? //gère la valeur en pourcentage de likes
+			  setValue((likes / (likes + disLikes)) * 100)
 			: setValue(((likes - 1) / (likes + disLikes)) * 100)
 	}
 

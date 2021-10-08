@@ -5,9 +5,9 @@ import { CardContextProvider } from "../context/CardContext"
 import { useMovie } from "../context/MovieContext"
 
 const ActionPage = () => {
-	let { list, searchFilter, postPerPages } = useMovie()
+	const { list, searchFilter, postPerPages } = useMovie()
 
-	let dataSearch = list.filter((item) => {
+	const dataSearch = list.filter((item) => {
 		return Object.keys(item).some((key) =>
 			item[key]
 				.toString()
@@ -16,7 +16,7 @@ const ActionPage = () => {
 		)
 	})
 
-	let newData = dataSearch.filter((item) => {
+	const newDataSearch = dataSearch.filter((item) => {
 		return item.category.includes("Action")
 	})
 	return (
@@ -30,7 +30,7 @@ const ActionPage = () => {
 						postPerPages === "4" ? "xl:grid-cols-4" : "xl:grid-cols-5"
 					}`}
 				>
-					{newData.map((el) => {
+					{newDataSearch.map((el) => {
 						const { id, image, title, category, synopsis } = el
 						return (
 							<ul key={id}>
