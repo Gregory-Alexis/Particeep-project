@@ -53,7 +53,7 @@ export const MovieContextProvider = ({ children }) => {
 	}, [isMounted])
 
 	const list = currentPosts.filter((el) => {
-		// retourne toute les cartes si filterCategory === true
+		// retourne toute les cartes si filterCategory === all
 		if (filterCategory === "all") {
 			return true
 		}
@@ -68,10 +68,10 @@ export const MovieContextProvider = ({ children }) => {
 				filterCategory,
 				currentPage,
 				postPerPages,
-				currentPosts,
 				indexOfLastPost,
 				indexOfFirstPost,
 				totalPosts,
+				currentPosts,
 				paginate,
 				loading,
 				error,
